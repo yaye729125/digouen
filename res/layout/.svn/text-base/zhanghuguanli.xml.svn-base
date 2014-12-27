@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#7c7c7c" >
+
+            <RadioButton
+                android:id="@+id/zhanghu_fanhui"
+                android:drawableLeft="@drawable/fanhui"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+               android:layout_centerVertical="true"    
+               android:button="@null"
+                android:paddingLeft="5dp"
+              	android:gravity="left|center_vertical"
+              	android:background="@drawable/wode_title_btn_selector"
+                android:textColor="#fbfdfc"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+	            android:layout_marginBottom="10dp"
+	            android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="账户管理"
+                android:textColor="#fbfdfc"
+                android:textSize="22sp" />
+
+            
+        </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/zhanhu_listView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ListView>
+
+    </LinearLayout>
+    
+</LinearLayout>

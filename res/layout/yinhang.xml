@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#7c7c7c" >
+
+        <RadioButton
+            android:id="@+id/wodexiaoxi_fanhui"
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/wode_title_btn_selector"
+            android:button="@null"
+            android:drawableLeft="@drawable/fanhui"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="5dp"
+            android:textColor="#fbfdfc"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="提现资料"
+            android:textColor="#fbfdfc"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:text="开户银行:" />
+
+        <EditText
+            android:id="@+id/yinhang_ed1"
+            android:layout_width="0dp"
+           android:gravity="center_vertical"
+           android:background="@null"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+    
+    <TextView android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:background="#cccccc"/>
+    
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:text="银行卡号:" />
+
+        <EditText
+            android:id="@+id/yinhang_ed2"
+            android:layout_width="0dp"
+           android:gravity="center_vertical"
+           android:background="@null"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+    
+    <TextView android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:background="#cccccc"/>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:text="银行户名:" />
+
+        <EditText
+            android:id="@+id/yinhang_ed3"
+            android:layout_width="0dp"
+           android:gravity="center_vertical"
+           android:background="@null"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+    
+    <TextView android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:background="#cccccc"/>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:text="单位名称:" />
+
+        <EditText
+            android:id="@+id/yinhang_ed4"
+            android:layout_width="0dp"
+           android:gravity="center_vertical"
+           android:background="@null"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+    
+    <TextView android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:background="#cccccc"/>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:text="财务联系人:" />
+
+        <EditText
+            android:id="@+id/yinhang_ed5"
+            android:layout_width="0dp"
+           android:gravity="center_vertical"
+           android:background="@null"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+    
+    <TextView android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:background="#cccccc"/>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:text="财务联系电话:" />
+
+        <EditText
+            android:id="@+id/yinhang_ed6"
+            android:layout_width="0dp"
+           android:gravity="center_vertical"
+           android:background="@null"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+    
+    <TextView android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:background="#cccccc"/>
+
+    <RadioButton
+        android:layout_marginTop="20dp"
+        android:id="@+id/yinhang_baocun"
+        android:button="@null"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/sel"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="保存" />
+    <TextView android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="5dp"
+        android:gravity="center_vertical|bottom"
+        android:text="小提示:提现资料只能修改一次"/>
+
+</LinearLayout>

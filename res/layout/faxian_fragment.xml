@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+   <include layout="@layout/search_title"/>
+   <com.gyh.digou.fenlei.NestRadioGroup
+	      android:id="@+id/fenlei_fragment_choose_result_radiogroup"
+	      android:layout_width="match_parent"
+	      android:layout_height="wrap_content"
+	      android:gravity="center_horizontal"
+	      android:orientation="horizontal"
+	      android:background="@color/white">
+	
+            
+            
+	      <RadioButton
+	          android:id="@+id/fenlei_fragment_choose_result_radiobtn_xiangguan"
+	          android:layout_width="0dp"
+	          android:layout_height="wrap_content"
+	          android:text="附近" 
+	          android:textColor="@color/fenlei_menu_textcolor"
+	          android:checked="true"
+	          android:layout_weight="1"
+	          android:button="@null"
+	      	  android:padding="10dp"
+	      	  android:gravity="center_horizontal"
+	      	 />
+	
+	      
+	      <View 
+	          android:layout_width="1px"
+	          android:layout_height="match_parent"
+	          android:layout_marginTop="8dp"
+	          android:layout_marginBottom="8dp"
+	          android:background="@color/bg_Gray"
+	          />
+	      <RadioButton
+	          android:id="@+id/fenlei_fragment_choose_result_radiobtn_xiaoliang"
+	          android:layout_width="0dp"
+	          android:layout_height="wrap_content"
+	          android:text="地狗商圈"
+	          android:textColor="@color/fenlei_menu_textcolor"
+	          android:layout_weight="1"
+	          android:button="@null"
+	      	  android:padding="10dp"
+	      	  android:gravity="center_horizontal" />
+	      </com.gyh.digou.fenlei.NestRadioGroup>
+    <View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:background="@color/bg_Gray"        
+        />
+    
+    
+    <ListView
+      android:id="@+id/faxian_list"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent" 
+      android:listSelector="@drawable/listselector"
+     >  
+  </ListView>
+</LinearLayout>

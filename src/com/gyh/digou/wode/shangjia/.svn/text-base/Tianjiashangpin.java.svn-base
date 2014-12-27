@@ -1,0 +1,753 @@
+package com.gyh.digou.wode.shangjia;
+
+
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URI;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.zip.Inflater;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import net.tsz.afinal.FinalHttp;
+import net.tsz.afinal.http.AjaxCallBack;
+import net.tsz.afinal.http.AjaxParams;
+
+import com.gyh.digou.R;
+import com.gyh.digou.app.MyApp;
+import com.gyh.digou.util.Tools;
+import com.gyh.digou.util.UploadUtil;
+import com.gyh.digou.wode.maijia.DizhiBianji;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.content.ContentResolver;
+import android.content.Context;
+import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
+import android.net.Uri;
+import android.opengl.Visibility;
+import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.ImageView.ScaleType;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.RadioButton;
+import android.widget.TextView;
+import android.widget.Toast;
+
+
+public class Tianjiashangpin extends Activity{
+	ImageButton button1;
+	LinearLayout layout;
+	LinearLayout layout2;
+	LinearLayout layout3;
+	LinearLayout layout4;
+	RadioButton tianjia_shangping;
+	RadioButton fenlei_button;
+	RadioButton tianjia_shuxing;
+     int a=0;
+     int b;
+     int c;
+     String dayta;
+     String cate_id;
+     EditText tianjia_title;
+     EditText tianjia_miaoshu;
+     EditText tianjia_pingpai;
+     EditText tianjia_tiaoxingma;
+     EditText tianjia_guigeming1;
+     EditText tianjia_guigeming2;
+     EditText yizu_guigezhi1;
+     EditText yizu_guigezhi2;
+     EditText yizu_lingshoujia;
+     EditText yizu_dijia;
+     EditText yizu_pifajia;
+     EditText yizu_kucun;
+     EditText erzu_guigezhi1;
+     EditText erzu_guigezhi2;
+     EditText erzu_lingshoujia;
+     EditText erzu_dijia;
+     EditText erzu_pifajia;
+     EditText erzu_kucun;
+     EditText sanzu_guigezhi1;
+     EditText sanzu_guigezhi2;
+     EditText sanzu_lingshoujia;
+     EditText sanzu_dijia;
+     EditText sanzu_pifajia;
+     EditText sanzu_kucun;
+     EditText sizu_guigezhi1;
+     EditText sizu_guigezhi2;
+     EditText sizu_ingshoujia;
+     EditText sizu_dijia;
+     EditText sizu_pifajia;
+     EditText sizu_kucun;
+     CheckBox shangjia_check;
+     CheckBox tuijian_check;
+     String id1;
+     String id2;
+    
+
+		String[] ss=new String[]{"相册","相机","取消"};	
+	 Bitmap myBitmap;
+     private byte[] mContent;
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.tianjiashangpin);
+	
+		tianjia_title=(EditText) findViewById(R.id.tianjia_title);
+		tianjia_miaoshu=(EditText) findViewById(R.id.tianjia_miaoshu);
+		tianjia_pingpai=(EditText) findViewById(R.id.tianjia_pingpai);
+		tianjia_tiaoxingma=(EditText) findViewById(R.id.tianjia_tiaoxingma);
+		tianjia_guigeming1=(EditText) findViewById(R.id.tianjia_guigeming1);
+		tianjia_guigeming2=(EditText) findViewById(R.id.tianjia_guigeming2);
+		yizu_guigezhi1=(EditText) findViewById(R.id.yizu_guigezhi1);
+		yizu_guigezhi2=(EditText) findViewById(R.id.yizu_guigezhi2);
+		yizu_lingshoujia=(EditText) findViewById(R.id.yizu_lingshoujia);
+		yizu_dijia=(EditText) findViewById(R.id.yizu_dijia);
+		yizu_pifajia=(EditText) findViewById(R.id.yizu_pifajia);
+		yizu_kucun=(EditText) findViewById(R.id.yizu_kucun);
+		erzu_guigezhi1=(EditText) findViewById(R.id.erzu_guigezhi1);
+		erzu_guigezhi2=(EditText) findViewById(R.id.erzu_guigezhi2);
+		erzu_lingshoujia=(EditText) findViewById(R.id.erzu_lingshoujia);
+		erzu_dijia=(EditText) findViewById(R.id.erzu_dijia);
+		erzu_pifajia=(EditText) findViewById(R.id.erzu_pifajia);
+		erzu_kucun=(EditText) findViewById(R.id.erzu_kucun);
+		sanzu_guigezhi1=(EditText) findViewById(R.id.sanzu_guigezhi1);
+		sanzu_guigezhi2=(EditText) findViewById(R.id.sanzu_guigezhi2);
+		sanzu_lingshoujia=(EditText) findViewById(R.id.sanzu_lingshoujia);
+		sanzu_dijia=(EditText) findViewById(R.id.sanzu_dijia);
+		sanzu_pifajia=(EditText) findViewById(R.id.sanzu_pifajia);
+		sanzu_kucun=(EditText) findViewById(R.id.sanzu_kucun);
+		sizu_guigezhi1=(EditText) findViewById(R.id.sizu_guigezhi1);
+		sizu_guigezhi2=(EditText) findViewById(R.id.sizu_guigezhi2);
+		sizu_ingshoujia=(EditText) findViewById(R.id.sizu_ingshoujia);
+		sizu_dijia=(EditText) findViewById(R.id.sizu_dijia);
+		sizu_pifajia=(EditText) findViewById(R.id.sizu_pifajia);
+		sizu_kucun=(EditText) findViewById(R.id.sizu_kucun);
+		shangjia_check=(CheckBox) findViewById(R.id.shangjia_check);
+		tuijian_check=(CheckBox) findViewById(R.id.tuijian_check);
+		
+		shangjia_check.setOnCheckedChangeListener(new OnCheckedChangeListener() {		
+			public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
+				
+				if(shangjia_check.isChecked()){
+					b=1;
+				}
+				else
+				{
+					b=0;
+				}
+				
+				
+				if(b==0){
+					Toast.makeText(Tianjiashangpin.this, "否", 0).show();
+				}
+				if(b==1){
+					Toast.makeText(Tianjiashangpin.this, "是", 0).show();
+				}
+			}
+		});
+		
+		tuijian_check.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+			
+			
+			public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
+				
+				if(tuijian_check.isChecked()){
+					c=1;
+				}
+				else
+				{
+					c=0;
+				}
+				
+				
+				if(c==0){
+					Toast.makeText(Tianjiashangpin.this, "否", 0).show();
+				}
+				if(c==1){
+					Toast.makeText(Tianjiashangpin.this, "是", 0).show();
+				}
+			}
+		});
+		
+		
+		
+		
+		
+		
+		 layout2=(LinearLayout) findViewById(R.id.lin2);
+		 layout3=(LinearLayout) findViewById(R.id.lin3);
+		 layout4=(LinearLayout) findViewById(R.id.lin4);
+		layout=(LinearLayout) findViewById(R.id.photo_image);
+		fenlei_button=(RadioButton) findViewById(R.id.fenlei_button);
+		tianjia_shuxing=(RadioButton) findViewById(R.id.tianjia_shuxing);
+		tianjia_shuxing.setOnClickListener(new OnClickListener() {
+			public void onClick(View arg0) {				
+                a++;            
+         if(a==1){
+        	 layout2.setVisibility(arg0.VISIBLE);
+         }
+         if(a==2){
+        	 layout3.setVisibility(arg0.VISIBLE);
+         }
+         if(a==3){
+        	 layout4.setVisibility(arg0.VISIBLE);
+         }
+         if(a>=4){
+        	Toast.makeText(Tianjiashangpin.this, "最多只能添加四组属性", 0).show();
+         }
+                
+              
+                
+			}
+		});
+		
+		
+		
+		
+		
+		 button1=(ImageButton) findViewById(R.id.tupian_button);
+		
+		 tianjia_shangping=(RadioButton) findViewById(R.id.tianjia_shangping);
+		
+		 tianjia_shangping.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				
+				
+			String tianjia_titlec=	tianjia_title.getText().toString();
+			String tianjia_miaoshuc=tianjia_miaoshu.getText().toString();
+			String tianjia_pingpaic=tianjia_pingpai.getText().toString();	
+				
+		String	tianjia_tiaoxingmac=tianjia_tiaoxingma.getText().toString();
+
+		String	tianjia_guigeming1c=tianjia_guigeming1.getText().toString();
+
+		String	tianjia_guigeming2c=tianjia_guigeming2.getText().toString();
+
+
+		String	yizu_guigezhi1c=yizu_guigezhi1.getText().toString();
+
+		String	yizu_guigezhi2c =yizu_guigezhi2.getText().toString();
+
+		String	yizu_lingshoujiac=yizu_lingshoujia.getText().toString();
+
+		String	yizu_dijiac=yizu_dijia.getText().toString();
+
+		String	yizu_pifajiac=yizu_pifajia.getText().toString();
+
+		String	yizu_kucunc=yizu_kucun.getText().toString();
+
+
+		String	erzu_guigezhi1c=erzu_guigezhi1.getText().toString();
+		String	erzu_guigezhi2c=erzu_guigezhi2.getText().toString();
+		String	erzu_lingshoujiac=erzu_lingshoujia.getText().toString();
+		String	erzu_dijiac=erzu_dijia.getText().toString();
+		String	erzu_pifajiac=erzu_pifajia.getText().toString();
+		String	erzu_kucunc=erzu_kucun.getText().toString();
+
+		String	sanzu_guigezhi1c=sanzu_guigezhi1.getText().toString();
+		String	sanzu_guigezhi2c=sanzu_guigezhi2.getText().toString();
+		String	sanzu_lingshoujiac=sanzu_lingshoujia.getText().toString();
+		String	sanzu_dijiac=sanzu_dijia.getText().toString();
+		String	sanzu_pifajiac=sanzu_pifajia.getText().toString();
+		String	sanzu_kucunc=sanzu_kucun.getText().toString();
+
+
+		String	sizu_guigezhi1c=sizu_guigezhi1.getText().toString();
+		String	sizu_guigezhi2c=sizu_guigezhi2.getText().toString();
+		String	sizu_ingshoujiac=sizu_ingshoujia.getText().toString();
+		String	sizu_dijiac=sizu_dijia.getText().toString();
+		String	sizu_pifajiac=sizu_pifajia.getText().toString();
+		String	sizu_kucunc=sizu_kucun.getText().toString();
+
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				  AjaxParams params = new AjaxParams();
+	            	MyApp myApp = (MyApp)Tianjiashangpin. this.getApplication();
+	             	String token = myApp.getInfo().getData().getToken();
+	                 MyApp app = (MyApp) Tianjiashangpin.this.getApplication();
+	             String id=id1+","+id2;
+	              String dijia=yizu_dijiac+","+erzu_dijiac+","+sanzu_dijiac+","+sizu_dijiac;
+	              String pifajia=yizu_pifajiac+","+erzu_pifajiac+","+sanzu_pifajiac+","+sizu_pifajiac;
+	              String kucun=yizu_kucunc+","+erzu_kucunc+","+sanzu_kucunc+","+sizu_kucunc;
+	              String lingshoujia=yizu_lingshoujiac+","+erzu_lingshoujiac+","+sanzu_lingshoujiac+","+sizu_ingshoujiac;
+	              String guigezhi1=yizu_guigezhi1c+","+erzu_guigezhi1c+","+sanzu_guigezhi1c+","+sizu_guigezhi1c;
+	              String guigezhi2=yizu_guigezhi2c+","+erzu_guigezhi2c+","+sanzu_guigezhi2c+","+sizu_guigezhi2c;
+	             
+	                 params.put("token",token);
+	         		params.put("barcode",tianjia_tiaoxingmac);
+	         		params.put("brand", tianjia_pingpaic);
+	         		params.put("cate_id",cate_id);
+	         		params.put("cate_name", dayta);
+	         		params.put("description",tianjia_miaoshuc);
+	         		params.put("goods_file_id[]", id);
+	         		
+	         		params.put("goods_name",dayta);
+	         		params.put("if_show",b);
+	         		params.put("minimum_price", yizu_dijiac);
+	         		params.put("minimum_price[]",dijia);
+	         		params.put("mk_price", yizu_pifajiac);
+	         		params.put("mk_price[]",pifajia);
+	         		params.put("price", yizu_lingshoujiac);
+	         		
+	         		params.put("price[]",lingshoujia);
+	         		params.put("recommended", b);
+	         		params.put("spec_1[]",guigezhi1);
+	         		params.put("spec_2[]", guigezhi2);
+	         		params.put("spec_name_1",tianjia_guigeming1c);
+	         		params.put("spec_name_2", tianjia_guigeming2c);
+	         		
+	         		params.put("stock",yizu_kucunc);
+	         		params.put("stock[]", kucun);
+
+
+	                
+	                 FinalHttp fh = new FinalHttp();
+	                        fh.post(Tools.getBaseUrl() +"?app=my_goods&act=api_add",
+	                        params, new AjaxCallBack<String>() {
+
+	                        	public void onFailure(Throwable t, int errorNo,
+	                        							String strMsg) {
+	                        					//	Toast.makeText(Tianjiashangpin.this, strMsg,
+	                        						//		Toast.LENGTH_SHORT).show();
+	                        					}
+
+	                        					@Override
+	                        					public void onSuccess(String t) {
+	                        						 System.out.println("---80-------"+t+"-----80-----80------------");
+	                        						 Toast.makeText(Tianjiashangpin.this, t, 0).show();         
+	                        						 try {
+	                        							 
+														JSONObject jsonObject=new JSONObject(t);
+														String js=jsonObject.getString("ErrNum");
+													if(js.endsWith("1")){
+														Toast.makeText(Tianjiashangpin.this, "提交失败", 0).show();
+													}
+													if(js.endsWith("0")){
+														Toast.makeText(Tianjiashangpin.this, "提交成功", 0).show();
+													}
+													} catch (JSONException e) {
+														// TODO Auto-generated catch block
+														e.printStackTrace();
+													}
+	                        						 
+	                        					
+	                        					}
+
+	                        				});
+				
+				
+				
+			}
+		});
+		 
+		 
+		 fenlei_button.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				
+				
+				Intent intent=new Intent(Tianjiashangpin.this, Xuanzefenlei.class);
+				startActivityForResult(intent, 3);
+				
+			
+			}
+		});
+		 
+		
+		 
+		 button1.setOnClickListener(new OnClickListener() {
+			
+			public void onClick(View arg0) {
+				
+				
+				 AlertDialog.Builder builder = new Builder(Tianjiashangpin.this);
+					builder.setTitle("选择图片");
+			//
+						View log = Tianjiashangpin.this.getLayoutInflater().inflate(R.layout.de_02, null);
+						builder.setView(log);
+						final AlertDialog alertDialog = builder.create();
+						alertDialog.show();
+				ListView vi=	(ListView) log.findViewById(R.id.de_01_listview);				
+			ArrayAdapter<String> adapter=new ArrayAdapter<String>(Tianjiashangpin.this, android.R.layout.simple_list_item_1, ss);	
+				vi.setAdapter(adapter);
+				vi.setOnItemClickListener(new OnItemClickListener() {
+
+					@Override
+					public void onItemClick(AdapterView<?> arg0, View arg1,
+							int arg2, long arg3) {
+					if(arg2==0){
+						
+						
+						// Intent intent = new Intent("com.android.camera.action.CROP");
+						  Intent intent = new Intent();
+				            intent.setType("image/*");
+
+				            intent.setAction(Intent.ACTION_GET_CONTENT);
+				            startActivityForResult(intent, 1);
+				            alertDialog.dismiss();
+					
+						
+						
+						
+					}
+					if(arg2==1){
+						 Intent intent = new Intent(
+                                 "android.media.action.IMAGE_CAPTURE");
+                 startActivityForResult(intent, 0);
+                      alertDialog.dismiss();
+						
+					}
+					if(arg2==2){
+						alertDialog.dismiss();
+						
+					}
+						
+						
+						
+					}
+				});	
+				
+				
+			}
+		});
+		 
+	}
+	
+	
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		 
+        ContentResolver resolver = getContentResolver();
+        /**
+         * 如果不拍照 或者不选择图片返回 不执行任何操作
+         */
+        
+        
+        if(requestCode==3){
+    		dayta=	 data.getStringExtra("cate_name");
+    		 cate_id=	 data.getStringExtra("cate_id");
+    		Toast.makeText(Tianjiashangpin.this, dayta+cate_id, 0).show();
+    
+    	fenlei_button.setText(dayta);
+        }
+        
+        
+        
+        
+        
+
+        if (data != null) {
+                /**
+                 * 因为两种方式都用到了startActivityForResult方法，这个方法执行完后都会执行onActivityResult方法
+                 * ， 所以为了区别到底选择了那个方式获取图片要进行判断
+                 * ，这里的requestCode跟startActivityForResult里面第二个参数对应 1== 相册 0 ==相机
+                 */
+                if (requestCode == 1) {
+
+                        try {
+                                // 获得图片的uri
+                                Uri originalUri = data.getData();
+                                // 将图片内容解析成字节数组
+                                mContent = readStream(resolver.openInputStream(Uri
+                                                .parse(originalUri.toString())));
+                                // 将字节数组转换为ImageView可调用的Bitmap对象
+                                myBitmap = getPicFromBytes(mContent, null);
+                                //把得到的图片绑定在控件上显示
+                                
+//
+//                                int twidth = myBitmap.getWidth();
+//                                int theight = myBitmap.getHeight();
+//                                float scaleHeight = (float)300/theight;
+//                                float scaleWidth = (float)400/twidth;
+//                                Matrix matrixA = new Matrix();
+//                                matrixA.postScale(scaleWidth, scaleHeight);
+//                          Bitmap      uploadImg = Bitmap.createBitmap(myBitmap,0,0,twidth,theight,matrixA,true);
+//                                
+//                                
+                                
+                                
+                                
+                                
+                                
+                                ImageView imageView=new ImageView(this);
+                              
+                                
+                              //  imageView.setLayoutParams(new LayoutParams(80, 80));
+                                imageView.setScaleType(ScaleType.FIT_CENTER);
+                                imageView.setImageBitmap(myBitmap);
+                                layout.addView(imageView);
+                          
+                                
+                                
+                                String [] proj={MediaStore.Images.Media.DATA};
+                                String imagePath="";
+                                
+                                @SuppressWarnings("deprecation")
+								Cursor cursor=managedQuery(originalUri,
+                                                           proj,
+                                                               null,null,null);
+                                 if(cursor!=null)
+                                        {
+                                        	int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+                                        	if(  cursor.getCount()>0 && cursor.moveToFirst() )
+                                            {
+                                            	imagePath = cursor.getString(column_index);
+                                            }
+                                        }                     
+                              
+                               
+                            
+                                 
+               //  String path=   resolver.toString();
+               //  File file=new File(path);
+               
+                 
+                // System.out.println(path+"---111---");
+                AjaxParams params = new AjaxParams();
+            	MyApp myApp = (MyApp) this.getApplication();
+             	String token = myApp.getInfo().getData().getToken();
+                 MyApp app = (MyApp) Tianjiashangpin.this.getApplication();
+                     params.put("token", token);
+                     params.put("file", new File(imagePath));
+                    // System.out.println("-=-=-=-=---------"+path);
+                 FinalHttp fh = new FinalHttp();
+                        fh.post(Tools.getBaseUrl() +"?app=comupload&act=api_uploadedfile",
+                        params, new AjaxCallBack<String>() {
+
+                        	public void onFailure(Throwable t, int errorNo,
+                        							String strMsg) {
+                        						Toast.makeText(Tianjiashangpin.this, strMsg,
+                        								Toast.LENGTH_SHORT).show();
+                        					}
+
+                        					@Override
+                        					public void onSuccess(String t) {
+                        						 System.out.println("---80-------"+t+"-----80-----80------------");
+
+                        						 Toast.makeText(Tianjiashangpin.this, t,
+                         								Toast.LENGTH_SHORT).show();		
+                                           try {
+											JSONObject jsonObject=new JSONObject(t);
+										id1=	jsonObject.getString("id");
+											
+											
+											
+											
+											
+											
+											
+										} catch (JSONException e) {
+											// TODO Auto-generated catch block
+											e.printStackTrace();
+										}
+                        						 
+                        						 
+                        						 
+                        					}
+
+                        				});
+                        		         
+                                
+                       
+                        } catch (Exception e) {
+                                System.out.println(e.getMessage());
+                        }
+
+                } else if (requestCode == 0) {
+
+                        String sdStatus = Environment.getExternalStorageState();
+                        if (!sdStatus.equals(Environment.MEDIA_MOUNTED)) { // 检测sd是否可用
+                                return;
+                        }
+                        Bundle bundle = data.getExtras();
+                        Bitmap bitmap = (Bitmap) bundle.get("data");// 获取相机返回的数据，并转换为Bitmap图片格式
+                        FileOutputStream b = null;
+                        File file = new File("/sdcard/myImage/");
+                        file.mkdirs();// 创建文件夹，名称为myimage
+
+                        // 照片的命名，目标文件夹下，以当前时间数字串为名称，即可确保每张照片名称不相同。
+                        String str = null;
+                        Date date = null;
+                        SimpleDateFormat format = new SimpleDateFormat("yyyyMMddHHmmss");// 获取当前时间，进一步转化为字符串
+                        date = new Date();
+                        str = format.format(date);
+                        String fileName = "/sdcard/myImage/" + str + ".jpg";
+                        try {
+                                b = new FileOutputStream(fileName);
+                                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, b);// 把数据写入文件
+                        } catch (FileNotFoundException e) {
+                                e.printStackTrace();
+                        } finally {
+                                try {
+                                        b.flush();
+                                        b.close();
+                                } catch (IOException e) {
+                                        e.printStackTrace();
+                                }
+                                if (data != null) {
+                                         Bitmap cameraBitmap = (Bitmap) data.getExtras().get(
+                                                        "data");
+                                        System.out.println("fdf================="
+                                                        + data.getDataString());
+                                        
+                                        
+                                        
+                                        
+                                        ImageView imageView=new ImageView(this);
+                                       
+                                        imageView.setImageBitmap(cameraBitmap);
+                                        imageView.setScaleType(ScaleType.FIT_CENTER);
+                                        layout.addView(imageView);
+                                        
+                                        
+                                        
+                                        
+                                        AjaxParams params = new AjaxParams();
+                                    	MyApp myApp = (MyApp) this.getApplication();
+                                     	String token = myApp.getInfo().getData().getToken();
+                                         MyApp app = (MyApp) Tianjiashangpin.this.getApplication();
+                                             params.put("token", token);
+                                             try {
+												params.put("file", new File(fileName));
+											} catch (FileNotFoundException e) {
+												// TODO Auto-generated catch block
+												e.printStackTrace();
+											}
+                                            // System.out.println("-=-=-=-=---------"+path);
+                                         FinalHttp fh = new FinalHttp();
+                                                fh.post(Tools.getBaseUrl() +"?app=comupload&act=api_uploadedfile",
+                                                params, new AjaxCallBack<String>() {
+
+                                                	public void onFailure(Throwable t, int errorNo,
+                                                							String strMsg) {
+                                                						Toast.makeText(Tianjiashangpin.this, strMsg,
+                                                								Toast.LENGTH_SHORT).show();
+                                                					}
+
+                                                					@Override
+                                                					public void onSuccess(String t) {
+                                                						 System.out.println("---80-------"+t+"-----80-----80------------");
+
+                                                						 Toast.makeText(Tianjiashangpin.this, t,
+                                                 								Toast.LENGTH_SHORT).show();		
+                                                						 try {
+																			JSONObject jsonObject=new JSONObject(t);
+																		id2=jsonObject.getString("id");
+																			
+																			
+																			
+																			
+																		} catch (JSONException e) {
+																			// TODO Auto-generated catch block
+																			e.printStackTrace();
+																		}
+
+                                                					}
+
+                                                				});
+                                                		                                 
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                                
+                                        System.out.println("成功======" + cameraBitmap.getWidth()
+                                                        + cameraBitmap.getHeight());
+                                }
+
+                        }
+                }
+        }
+}
+       
+	
+	
+public static Bitmap getPicFromBytes(byte[] bytes,
+                BitmapFactory.Options opts) {
+        if (bytes != null)
+                if (opts != null)
+                        return BitmapFactory.decodeByteArray(bytes, 0, bytes.length,
+                                        opts);
+                else
+                        return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+        return null;
+}
+
+public static byte[] readStream(InputStream inStream) throws Exception {
+        byte[] buffer = new byte[1024];
+        int len = -1;
+        ByteArrayOutputStream outStream = new ByteArrayOutputStream();
+        while ((len = inStream.read(buffer)) != -1) {
+                outStream.write(buffer, 0, len);
+        }
+        byte[] data = outStream.toByteArray();
+        outStream.close();
+        inStream.close();
+        return data;
+
+        
+}
+  
+
+
+	
+	
+}

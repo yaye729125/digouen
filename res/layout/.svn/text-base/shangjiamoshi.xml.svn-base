@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shangjiabeijing"
+    android:orientation="vertical" >
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_weight="1"
+    android:background="#7c7c7c"
+    android:orientation="horizontal">
+     <Button
+               android:layout_weight="1"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:text="设置"
+                android:paddingLeft="5dp"
+              	android:gravity="center"
+              	android:background="@drawable/wode_title_btn_selector"
+                android:textColor="#fbfdfc"
+                android:textSize="15sp" />
+     
+     <TextView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="我的地狗"
+                android:textColor="#fbfdfc"
+                android:textSize="22sp" />
+    <Button
+               android:id="@+id/shangjia_caigou"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                   android:layout_weight="1"
+	            android:padding="5dp"
+                android:text="采购模式"
+                android:textColor="#fbfdfc"
+                android:background="@drawable/wode_title_btn_selector"
+                android:textSize="15sp" />
+    
+    
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/gerenzhuantai_image"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+	               
+	                android:id="@+id/shangjia_touxiang"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+  	              
+	                android:background="@drawable/touxiang" />
+        
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:paddingLeft="10dp"
+           android:gravity="center"
+            android:orientation="vertical">
+            
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/shangjia_name"
+               android:paddingLeft="10dp"
+                android:text="admin"/>
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                 android:paddingLeft="10dp"
+                 android:id="@+id/shangjia_huiyuan"
+                android:text="地狗会员"/>
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/shangjia_shuangdian"
+                 android:paddingLeft="10dp"
+                android:text="爽点"/>
+            <TextView android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                 android:paddingLeft="10dp"
+                 android:id="@+id/shangjia_zijin"
+                android:layout_height="wrap_content"
+                android:text="未提现金额:"/>
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+   
+    
+    
+    
+    
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="6"
+        android:orientation="vertical"
+       
+        android:layout_height="wrap_content" >
+       <LinearLayout android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal" >
+           <RadioButton android:layout_width="wrap_content"
+               android:layout_weight="1"
+               android:button="@null"
+               android:layout_marginLeft="10dp"
+               android:layout_marginTop="10dp"
+               android:id="@+id/dingdanguanli_button"
+               android:layout_height="100dp"
+               android:drawableTop="@drawable/ic_launcher"
+             
+               android:gravity="center"
+               android:text="订单管理"/>
+           <RadioButton android:layout_width="wrap_content"
+               android:layout_marginLeft="10dp"
+               android:layout_marginTop="10dp"
+               android:layout_weight="1"
+                android:button="@null"
+                 android:drawableTop="@drawable/ic_launcher"
+               android:gravity="center"
+               android:layout_height="100dp"
+               android:layout_marginRight="10dp"
+               android:text="店铺首页"/>
+       </LinearLayout>
+       
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" >
+      <RadioButton android:layout_width="wrap_content"
+               android:layout_weight="1"
+               android:id="@+id/shangjia_shangpinguanli"
+               android:layout_marginLeft="10dp"
+               android:layout_marginTop="10dp"
+               android:button="@null"
+               android:drawableTop="@drawable/ic_launcher"
+               android:gravity="center"
+               android:layout_height="80dp"
+               android:text="商品管理"/>
+           <RadioButton android:layout_width="wrap_content"
+               android:layout_marginLeft="10dp"
+               android:id="@+id/digoushuangdian"
+               android:layout_marginTop="10dp"
+               android:layout_weight="1"
+               android:layout_height="80dp"
+               android:button="@null"
+               android:drawableTop="@drawable/ic_launcher"
+               android:gravity="center"
+               android:layout_marginRight="10dp"
+               android:text="地狗爽点"/>
+</LinearLayout>
+       
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" >
+    <RadioButton android:layout_width="wrap_content"
+               android:layout_weight="1"
+               android:id="@+id/shangjizijinguanli"
+               android:layout_marginLeft="10dp"
+               android:layout_marginTop="10dp"
+               android:layout_height="80dp"
+               android:button="@null"
+               android:drawableTop="@drawable/ic_launcher"
+               android:gravity="center"
+               android:text="资金管理"/>
+           <RadioButton android:layout_width="wrap_content"
+               android:id="@+id/zhanghuguanli_button"
+               android:layout_marginLeft="10dp"
+               android:layout_marginTop="10dp"
+               android:layout_weight="1"
+               android:layout_height="80dp"
+               android:button="@null"
+               android:drawableTop="@drawable/ic_launcher"
+               android:gravity="center"
+               android:layout_marginRight="10dp"
+               android:text="账户管理"/>
+</LinearLayout>
+       
+</LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/ic_launcher" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+           
+            android:background="#000000"
+            android:text="消息通知"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+</LinearLayout>

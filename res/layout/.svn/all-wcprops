@@ -1,0 +1,497 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/digou/!svn/ver/129/Digou4.07/res/layout
+END
+yijianfankui.xml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/yijianfankui.xml
+END
+fenlei_xiangguan_fragment.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/fenlei_xiangguan_fragment.xml
+END
+cart_change_cartnum.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/digou/!svn/ver/15/Digou4.07/res/layout/cart_change_cartnum.xml
+END
+shoucang_style.xml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/digou/!svn/ver/74/Digou4.07/res/layout/shoucang_style.xml
+END
+camera.xml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/digou/!svn/ver/40/Digou4.07/res/layout/camera.xml
+END
+de_01.xml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/digou/!svn/ver/28/Digou4.07/res/layout/de_01.xml
+END
+de_02.xml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/digou/!svn/ver/116/Digou4.07/res/layout/de_02.xml
+END
+pull_to_refresh_list_header.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/pull_to_refresh_list_header.xml
+END
+zijinlist_style.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/digou/!svn/ver/128/Digou4.07/res/layout/zijinlist_style.xml
+END
+mytoast.xml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/digou/!svn/ver/41/Digou4.07/res/layout/mytoast.xml
+END
+scale_pic_item.xml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/scale_pic_item.xml
+END
+mimagenghuan.xml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/mimagenghuan.xml
+END
+dingdanguanli.xml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/digou/!svn/ver/67/Digou4.07/res/layout/dingdanguanli.xml
+END
+dingdan.xml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/digou/!svn/ver/84/Digou4.07/res/layout/dingdan.xml
+END
+pull_to_refresh_header.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/pull_to_refresh_header.xml
+END
+fenlei_fragment_en.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/digou/!svn/ver/14/Digou4.07/res/layout/fenlei_fragment_en.xml
+END
+dizhiguanli.xml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/dizhiguanli.xml
+END
+tianjiashangpin.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/digou/!svn/ver/124/Digou4.07/res/layout/tianjiashangpin.xml
+END
+fenlei_xinpin_fragment.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/fenlei_xinpin_fragment.xml
+END
+shouye_search_list_item.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/digou/!svn/ver/39/Digou4.07/res/layout/shouye_search_list_item.xml
+END
+shuangdianchongzhi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/shuangdianchongzhi.xml
+END
+dingdanxiangxi_sytle.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/digou/!svn/ver/70/Digou4.07/res/layout/dingdanxiangxi_sytle.xml
+END
+yigeyueyiqian_fragment.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/yigeyueyiqian_fragment.xml
+END
+zhuce.xml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/digou/!svn/ver/75/Digou4.07/res/layout/zhuce.xml
+END
+item_detail.xml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/item_detail.xml
+END
+shenqingshangjia.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/digou/!svn/ver/29/Digou4.07/res/layout/shenqingshangjia.xml
+END
+shangjiadingdanguanli_styl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/shangjiadingdanguanli_styl.xml
+END
+item_detail_choose_format.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/item_detail_choose_format.xml
+END
+cart.xml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/cart.xml
+END
+maijiadingdan_styl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/digou/!svn/ver/72/Digou4.07/res/layout/maijiadingdan_styl.xml
+END
+listview_xiangxi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/listview_xiangxi.xml
+END
+yinhang.xml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/digou/!svn/ver/125/Digou4.07/res/layout/yinhang.xml
+END
+zijin_style.xml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/digou/!svn/ver/126/Digou4.07/res/layout/zijin_style.xml
+END
+search_title.xml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/digou/!svn/ver/39/Digou4.07/res/layout/search_title.xml
+END
+zhanhu_styl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/zhanhu_styl.xml
+END
+show_item_big_picture.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/digou/!svn/ver/14/Digou4.07/res/layout/show_item_big_picture.xml
+END
+dingdanxiangqing.xml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/digou/!svn/ver/117/Digou4.07/res/layout/dingdanxiangqing.xml
+END
+fenlei_xiaoliang_fragment.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/fenlei_xiaoliang_fragment.xml
+END
+wode_fragment.xml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/wode_fragment.xml
+END
+xiaoxi_style.xml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/xiaoxi_style.xml
+END
+dizhi_styl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/dizhi_styl.xml
+END
+list_header.xml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/digou/!svn/ver/39/Digou4.07/res/layout/list_header.xml
+END
+item_detail_description.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/item_detail_description.xml
+END
+zijinguanli.xml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/digou/!svn/ver/127/Digou4.07/res/layout/zijinguanli.xml
+END
+shangjiamoshi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/digou/!svn/ver/120/Digou4.07/res/layout/shangjiamoshi.xml
+END
+main.xml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/digou/!svn/ver/39/Digou4.07/res/layout/main.xml
+END
+fenlei_fragment.xml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/fenlei_fragment.xml
+END
+no_network.xml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/no_network.xml
+END
+fenlei_nianlingjieduan_expanded_childview.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/fenlei_nianlingjieduan_expanded_childview.xml
+END
+welcomone.xml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/welcomone.xml
+END
+faxian_fragment.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/digou/!svn/ver/39/Digou4.07/res/layout/faxian_fragment.xml
+END
+list_item.xml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/list_item.xml
+END
+xiugaishouhuodizhi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/digou/!svn/ver/30/Digou4.07/res/layout/xiugaishouhuodizhi.xml
+END
+dingdanxiangqing1.xml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/digou/!svn/ver/86/Digou4.07/res/layout/dingdanxiangqing1.xml
+END
+dingdanxiangqing2.xml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/digou/!svn/ver/69/Digou4.07/res/layout/dingdanxiangqing2.xml
+END
+zhanhuguanli.xml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/zhanhuguanli.xml
+END
+cart_shopowner.xml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/cart_shopowner.xml
+END
+navigate_title.xml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/navigate_title.xml
+END
+fenlei_choose_result.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/fenlei_choose_result.xml
+END
+child_shoe_wholesale.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/digou/!svn/ver/39/Digou4.07/res/layout/child_shoe_wholesale.xml
+END
+inflater.xml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/digou/!svn/ver/119/Digou4.07/res/layout/inflater.xml
+END
+actionsheet.xml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/digou/!svn/ver/15/Digou4.07/res/layout/actionsheet.xml
+END
+base_title.xml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/digou/!svn/ver/39/Digou4.07/res/layout/base_title.xml
+END
+shouye.xml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/shouye.xml
+END
+faxian_list_item.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/digou/!svn/ver/39/Digou4.07/res/layout/faxian_list_item.xml
+END
+wodexiaoxi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/wodexiaoxi.xml
+END
+shuangdianguanli.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/shuangdianguanli.xml
+END
+diqu_style.xml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/digou/!svn/ver/11/Digou4.07/res/layout/diqu_style.xml
+END
+wodeshoucang.xml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/wodeshoucang.xml
+END
+shangpin_style.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/digou/!svn/ver/121/Digou4.07/res/layout/shangpin_style.xml
+END
+fenlei_nianlingjieduan_expanded_parentview.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/fenlei_nianlingjieduan_expanded_parentview.xml
+END
+no_network_toast.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/digou/!svn/ver/41/Digou4.07/res/layout/no_network_toast.xml
+END
+fenlei_fragment_listitem.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/digou/!svn/ver/39/Digou4.07/res/layout/fenlei_fragment_listitem.xml
+END
+zijintixian.xml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/digou/!svn/ver/129/Digou4.07/res/layout/zijintixian.xml
+END
+shouye_search.xml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/digou/!svn/ver/39/Digou4.07/res/layout/shouye_search.xml
+END
+fenlei.xml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/digou/!svn/ver/118/Digou4.07/res/layout/fenlei.xml
+END
+fragment.xml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/fragment.xml
+END
+jinyigeyue_fragment.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/digou/!svn/ver/2/Digou4.07/res/layout/jinyigeyue_fragment.xml
+END
+shangpinxuanzefenlei_style.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/digou/!svn/ver/123/Digou4.07/res/layout/shangpinxuanzefenlei_style.xml
+END
+cart_item.xml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/digou/!svn/ver/39/Digou4.07/res/layout/cart_item.xml
+END
+shangpinguanli.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/digou/!svn/ver/122/Digou4.07/res/layout/shangpinguanli.xml
+END
+login.xml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/digou/!svn/ver/71/Digou4.07/res/layout/login.xml
+END

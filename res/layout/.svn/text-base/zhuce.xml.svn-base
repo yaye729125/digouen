@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#7c7c7c" >
+
+        <RadioButton
+            android:id="@+id/wodexiaoxi_fanhui"
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+           
+            android:button="@null"
+          
+            android:gravity="left|center_vertical"
+            android:paddingLeft="5dp"
+            android:textColor="#fbfdfc"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="注册"
+            android:textColor="#fbfdfc"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+    <EditText
+        
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/my_phone"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/sha2"
+        android:hint="填写中国大陆手机号，其他用户不可见"
+        android:textSize="12dp"
+        android:phoneNumber="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+       android:drawableLeft="@drawable/my_phone"
+        android:ems="10" >
+
+    </EditText>
+    <EditText
+        android:id="@+id/my_password"
+        android:layout_marginTop="20dp"
+         android:textSize="12dp"
+         android:password="true"
+        android:hint="6-20位密码，建议数字、字母、符号..."
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/sha2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+       android:drawableLeft="@drawable/my_password"
+        android:ems="10" >
+
+    </EditText>
+    <EditText
+        android:id="@+id/my_username"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/sha2"
+        android:hint="用户名，3-25个字符"
+        android:textSize="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+       android:drawableLeft="@drawable/my_user"
+        android:ems="10" >
+
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/my_yanzhenma"
+            android:layout_width="0dp"
+            android:background="@drawable/sha2"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1">
+            
+        </EditText>
+
+        <Button
+            android:id="@+id/my_button"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="发送激活码" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:paddingLeft="20dp"
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:text="我已同意并阅读"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:layout_height="30dp"
+            />
+
+    </LinearLayout>
+
+    <RadioButton
+        android:id="@+id/zhuce_radioButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/sel"
+        android:layout_marginLeft="20dp"
+        android:button="@null"
+        android:gravity="center"
+        android:layout_marginRight="20dp"
+        android:text="注册" />
+    
+</LinearLayout>

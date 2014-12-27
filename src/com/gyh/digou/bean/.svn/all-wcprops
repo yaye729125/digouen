@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/digou/!svn/ver/14/Digou4.07/src/com/gyh/digou/bean
+END
+CartGoodsInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/bean/CartGoodsInfo.java
+END
+LoginData.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/bean/LoginData.java
+END
+CartInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/bean/CartInfo.java
+END
+Store_owner.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/bean/Store_owner.java
+END
+GoodsCategory.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/digou/!svn/ver/14/Digou4.07/src/com/gyh/digou/bean/GoodsCategory.java
+END
+ItemDetailData.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/bean/ItemDetailData.java
+END
+Goods.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/bean/Goods.java
+END
+Specs.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/bean/Specs.java
+END
+IImages.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/bean/IImages.java
+END
+ShopOwner.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/bean/ShopOwner.java
+END
+LoginInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/bean/LoginInfo.java
+END
+Store_Data.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/bean/Store_Data.java
+END
+GoodsCategoryInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/bean/GoodsCategoryInfo.java
+END
+BaseInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/bean/BaseInfo.java
+END
+Cart.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/bean/Cart.java
+END
+ItemDetailInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/bean/ItemDetailInfo.java
+END

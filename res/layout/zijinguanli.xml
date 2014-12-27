@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+<RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#7c7c7c" >
+
+        <RadioButton
+            android:id="@+id/wodexiaoxi_fanhui"
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/wode_title_btn_selector"
+            android:button="@null"
+            android:drawableLeft="@drawable/fanhui"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="5dp"
+            android:textColor="#fbfdfc"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="资金详情"
+            android:textColor="#fbfdfc"
+            android:textSize="22sp" />
+    </RelativeLayout>
+  
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" >
+
+        <TextView
+            
+            android:id="@+id/textView1"
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:layout_height="wrap_content"
+            android:text="资金总额" 
+            android:textSize="17sp"
+            
+            />
+
+        <TextView
+            android:id="@+id/ziji_zonge"
+           
+           android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="@color/item_detail_add_cart_bg" />
+
+        <RadioButton
+            android:id="@+id/zijin_tixian"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/item_detail_bottom_layout_addcart_selector"
+             android:button="@null"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:padding="5dp"
+            android:text="提现" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical|bottom"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:text="资金详情" 
+        
+      />
+
+    <ListView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/zijin_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:divider="@color/base_bg_gray"
+        android:dividerHeight="1.5dp"
+        
+        >
+    </ListView>
+
+</LinearLayout>

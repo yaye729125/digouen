@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<declare-styleable name="SlidingSwitcherView">
+	    <attr name="auto_play" format="boolean"/>
+	</declare-styleable>
+
+</resources>
+
+
+ <!-- 此文件attrs是自定义属性文件
+   attr:属性
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PowerImageView">  
+        <attr name="auto_play" format="boolean"></attr>  
+    </declare-styleable>
+</resources>
+ --> 

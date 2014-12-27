@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<include layout="@layout/base_title"/>
+    
+     <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="2"
+                android:paddingLeft="5dp"
+                android:text="商品名字:" />
+
+            <EditText
+                android:id="@+id/shangjia_edit_comm_name"
+                 android:gravity="center_vertical"
+                android:layout_width="0dp"
+              
+                android:layout_height="50dp"
+                android:layout_weight="5"
+                android:background="@null"
+                android:hint="请输入商品名字" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+             android:layout_marginRight="5dp"
+         android:background="#cccccc" />
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="2"
+                android:paddingLeft="5dp"
+                android:text="商品价格:" />
+
+            <EditText
+                android:id="@+id/shangjia_edit_comm_price"
+                 android:gravity="center_vertical"
+                android:layout_width="0dp"
+             
+                android:layout_height="50dp"
+                android:layout_weight="5"
+                android:background="@null"
+                android:hint="请输入商品价格" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+             android:layout_marginRight="5dp"
+         android:background="#cccccc" />
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="2"
+                android:paddingLeft="5dp"
+                android:text="商品描述:" />
+
+            <EditText
+                 android:gravity="center_vertical"
+                android:layout_width="0dp"
+               android:id="@+id/shangjia_edit_comm_des"
+                android:layout_height="50dp"
+                android:layout_weight="5"
+                android:background="@null"
+                android:hint="请输入商品描述" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+             android:layout_marginRight="5dp"
+         android:background="#cccccc" />
+        
+        
+        <Button
+            android:id="@+id/shangjia_edit_comm_del"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="删除该商品"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            />
+    
+</LinearLayout>

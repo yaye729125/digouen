@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:background="@null" >
+asd
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:background="@drawable/mytoastbg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="8dp" 
+        android:paddingBottom="8dp">
+
+        <ProgressBar
+            android:id="@+id/chapterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           
+              android:layout_centerHorizontal="true"
+         
+           	style="@android:style/Widget.ProgressBar.Small.Inverse"
+           
+            />
+
+        <TextView
+            android:id="@+id/percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chapterName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+          
+            android:textColor="#ffffff"
+            android:text="正在加载"
+            android:textSize="16sp" /> 
+    </RelativeLayout>
+
+</LinearLayout>

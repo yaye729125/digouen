@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+  	android:descendantFocusability="blocksDescendants"
+  	android:background="#ffffff"
+     >
+
+    
+   <!-- <CheckBox 
+        android:id="@+id/cart_item_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        
+        /> -->
+    <ImageView
+        android:id="@+id/makeorder_list_item_imv" 
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:src="@drawable/digouicon"
+       android:layout_margin="8dp"
+       android:focusable="false"
+     
+       android:background="@null"
+        /> 
+        
+    <LinearLayout android:orientation="vertical"
+        
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        
+        
+   
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        
+        > 
+        
+          <TextView
+	        android:id="@+id/makeorder_list_item_tv_name"
+	        android:layout_width="120dp"
+	        android:layout_height="wrap_content"
+	      	android:paddingTop="8dp"
+	      	android:paddingBottom="8dp"
+	        android:text="冬季加绒保暖大衣大码100"
+       		/> 
+        
+        
+              <TextView
+        android:id="@+id/makeorder_list_item_tv_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="￥34"
+      	android:gravity="right"
+       android:paddingTop="8dp"
+       android:paddingBottom="8dp"
+       android:paddingRight="40dp"
+        /> 
+        
+         
+    </RelativeLayout> 
+  <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+          android:gravity="right"
+        > 
+        
+      
+                <TextView
+                    android:id="@+id/makeorder_list_item_tv_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                  android:layout_marginTop="10dp"
+            
+                   android:padding="8dp"
+                 
+                   
+                 
+                    android:textColor="@color/tv_Black"
+                    android:text="x1" /> 
+   
+         <TextView
+        android:id="@+id/makeorder_list_item_tv_format"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="红色/大码"
+      	android:gravity="right"
+      	android:layout_marginTop="10dp"
+     	android:paddingTop="8dp"
+       android:paddingRight="40dp"
+        /> 
+    </RelativeLayout>
+    
+     </LinearLayout>
+</LinearLayout>

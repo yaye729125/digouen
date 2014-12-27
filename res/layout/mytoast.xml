@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:background="@null" >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:background="@drawable/mytoastbg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="14dp"
+        android:paddingRight="10dp"
+        android:paddingTop="8dp" 
+        android:paddingBottom="8dp">
+
+       <ProgressBar
+		android:id="@+id/mytoast_progerssbar"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+	
+		android:layout_centerHorizontal="true"
+	
+		android:paddingTop="10dp"
+	
+		style="?android:attr/progressBarStyle"
+		android:indeterminate="false"
+		android:indeterminateDrawable="@anim/loading" />
+
+        <TextView
+            android:id="@+id/mytoast_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mytoast_progerssbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+          
+            android:textColor="#ffffff"
+            android:text="正在加载"
+            android:textSize="16sp" /> 
+    </RelativeLayout>
+
+</LinearLayout>

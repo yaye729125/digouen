@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    
+
+    <ImageView
+        android:id="@+id/faxian_list_item_storelogo"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+       
+        android:layout_gravity="center_vertical"
+      
+        android:gravity="center_vertical"
+      
+        android:src="@drawable/qibohuixie" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+     
+       
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+    	android:orientation="vertical" 
+    	android:layout_margin="8dp" >
+
+        <TextView
+            android:id="@+id/faxian_storename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+	        android:textSize="15sp"
+	        android:textColor="#454545"
+            android:text="test" />
+        
+        <RatingBar 
+            android:id="@+id/faxian_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           	android:numStars="5"
+           
+           	android:paddingTop="5dp"
+           	android:paddingBottom="5dp"
+           	android:rating="1.4"
+           style="?android:attr/ratingBarStyleSmall"
+           	
+            />
+
+        <RelativeLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+          
+            android:layout_height="wrap_content" >
+
+            <TextView
+                 android:id="@+id/faxian_list_item_loc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+		        android:textSize="15sp"
+		        android:textColor="@android:color/darker_gray"
+		        android:layout_alignParentLeft="true"
+		        android:layout_toLeftOf="@+id/faxian_list_item_distance"
+                android:text="大成市场" />
+
+            <TextView
+                android:id="@+id/faxian_list_item_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               
+		      
+		       android:textColor="@android:color/darker_gray"
+		       android:layout_alignParentRight="true"
+		       android:layout_marginRight="8dp"
+                android:text="300m" />
+
+        </RelativeLayout>
+        
+
+	    
+    </LinearLayout>
+</LinearLayout>

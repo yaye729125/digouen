@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/cart_content"
+  >
+     
+    
+    <LinearLayout 
+        android:id="@+id/cart_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/cart_title"
+            android:textSize="17sp"
+            />
+        
+    </LinearLayout>
+    
+    <com.handmark.pulltorefresh.library.PullToRefreshExpandableListView
+        android:id="@+id/cart_expandlistview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cart_title"
+        android:layout_above="@+id/cart_bottom"
+        android:groupIndicator="@null"
+    	android:cacheColorHint="@android:color/transparent"
+    	
+        ></com.handmark.pulltorefresh.library.PullToRefreshExpandableListView>
+   
+	<LinearLayout 
+	    android:id="@+id/cart_bottom"
+      
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+       	android:layout_alignParentBottom="true"
+       	android:background="@color/cart_gray">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+          	android:gravity="center_horizontal"
+          	android:text="@string/cart_yao"
+          	android:padding="5dp"
+            />
+        <Button
+          android:id="@+id/cart_btn_shake"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/cart_yao_btntv"
+          android:textColor="@color/white"
+          android:background="@drawable/item_detail_bottom_layout_yao_selector"
+          android:paddingLeft="40dp"
+          android:paddingRight="40dp"
+          android:paddingTop="10dp"
+          android:paddingBottom="10dp"
+          android:layout_marginTop="8dp"
+          android:layout_marginBottom="8dp"
+          android:layout_gravity="center_horizontal"
+          android:textSize="15sp"
+          />
+        
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+          
+           android:layout_marginBottom="5dp"
+            
+            >
+            
+            
+            
+            
+            <TextView
+                android:id="@+id/cart_bottom_tv_heji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_centerHorizontal="true"
+               android:layout_centerVertical="true"
+            	android:layout_marginLeft="20dp"
+             	android:layout_alignParentLeft="true"
+                android:text="@string/cart_heji"/>
+            <TextView
+                android:id="@+id/cart_bottom_heji_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/tv_Red"
+                android:layout_toRightOf="@+id/cart_bottom_tv_heji"
+                android:text="￥0.0"
+                 android:layout_centerHorizontal="true"
+               android:layout_centerVertical="true"
+                android:textSize="16sp"
+                />
+            <Button 
+                android:id="@+id/cart_bottom_btn_jiesuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                 android:background="@drawable/item_detail_bottom_layout_yao_selector"
+                android:layout_marginRight="10dp"
+               
+                android:padding="6dp"
+                  android:layout_centerHorizontal="true"
+               android:layout_centerVertical="true"
+               android:textColor="@color/white"
+                android:text="@string/cart_jiesuan_btntv"
+                />
+        </RelativeLayout>
+        
+        
+    </LinearLayout>
+</RelativeLayout>

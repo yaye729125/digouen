@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/digou/!svn/ver/39/Digou4.07/src/com/zxing/camera
+END
+FlashlightManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/digou/!svn/ver/39/Digou4.07/src/com/zxing/camera/FlashlightManager.java
+END
+CameraManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/digou/!svn/ver/39/Digou4.07/src/com/zxing/camera/CameraManager.java
+END
+AutoFocusCallback.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/digou/!svn/ver/39/Digou4.07/src/com/zxing/camera/AutoFocusCallback.java
+END
+CameraConfigurationManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/digou/!svn/ver/39/Digou4.07/src/com/zxing/camera/CameraConfigurationManager.java
+END
+PlanarYUVLuminanceSource.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/digou/!svn/ver/39/Digou4.07/src/com/zxing/camera/PlanarYUVLuminanceSource.java
+END
+PreviewCallback.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/digou/!svn/ver/39/Digou4.07/src/com/zxing/camera/PreviewCallback.java
+END

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+    <include layout="@layout/title_onlyback"/>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="现场支付:"
+        android:textSize="18sp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp" 
+        />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请您确认已经支付现金给店长现在由店长为您输入现场交易确认密码"
+        android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp" 
+    android:textColor="@color/base_gray"
+    
+    
+    />
+    
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      
+        android:background="@drawable/makeorder_remark_edit_bg"
+         android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp" 
+    android:layout_marginTop="8dp"
+        android:hint="请输入现场交易密码"
+        android:padding="10dp" />
+        
+        <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      
+        android:background="@drawable/makeorder_remark_edit_bg"
+        android:text="确定使用"
+         android:layout_marginLeft="8dp"
+	    android:layout_marginRight="8dp" 
+	    android:layout_marginTop="8dp"
+        android:textColor="@color/title_gray"
+        android:textSize="18sp"
+        android:padding="10dp" />
+        
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            >
+            <Button 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="忘记密码?"
+                android:background="@null"
+                android:textColor="@color/title_gray"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                />
+            <Button 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="找回支付密码"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:textColor="@color/tv_Red"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                />
+            
+            
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/title_gray"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            />
+   
+        
+       <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="在线支付:"
+        android:textSize="18sp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginLeft="8dp"
+    	android:layout_marginRight="8dp" 
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      
+        android:background="@drawable/base_btn_selector"
+        android:text="支付宝支付"
+         android:layout_marginLeft="8dp"
+	    android:layout_marginRight="8dp" 
+	    android:layout_marginTop="8dp"
+        android:textColor="@color/title_gray"
+        android:textSize="18sp"
+        android:padding="10dp" />
+    
+    
+</LinearLayout>

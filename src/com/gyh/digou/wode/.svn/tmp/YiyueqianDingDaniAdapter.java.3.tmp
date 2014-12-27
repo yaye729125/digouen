@@ -1,0 +1,338 @@
+package com.gyh.digou.wode;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import net.tsz.afinal.FinalBitmap;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.app.Activity;
+import android.content.Context;
+import android.media.Image;
+import android.opengl.Visibility;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.gyh.digou.R;
+import com.gyh.digou.fenlei.LeftViewAdapter.ViewHolder;
+
+public class YiyueqianDingDaniAdapter extends BaseAdapter {
+
+	
+	private Context mContext;
+	private List<JSONObject> list;
+	LayoutInflater inflater;
+
+	public YiyueqianDingDaniAdapter(Context mContext)
+	{
+		
+
+	public YiyueqianDingDaniAdapter(Context mContext, List<JSONObject> list) {
+
+
+		//System.out.println(list.get(0).toString());
+
+		this.mContext=mContext;
+		
+		inflater=LayoutInflater.from(mContext);
+
+		this.mContext = mContext;
+		this.list = list;
+		inflater = LayoutInflater.from(mContext);
+
+		finalBitmap=FinalBitmap.create(mContext);
+	}
+
+	public void setData(List<JSONObject> list)
+	{
+		if(list!=null)
+		{
+			this.list=list;
+			notifyDataSetChanged();
+		}
+		
+		
+		
+	}
+	
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		return list==null?0:list.size();
+	}
+
+	@Override
+	public Object getItem(int arg0) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public long getItemId(int arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public View getView(int arg0, View arg1, ViewGroup arg2) {
+<<<<<<< .mine
+		
+		
+		
+		ViewHodler holder=null;
+				if(arg1==null){
+					holder=new ViewHodler();
+					arg1=inflater.inflate(R.layout.maijiadingdan_styl, null);
+					
+					holder.t2=(TextView) arg1.findViewById(R.id.dingdanhao_text);
+					holder.tv=(TextView) arg1.findViewById(R.id.dingdanjine_text);
+					holder.t3=(TextView) arg1.findViewById(R.id.xiadanshijian_text);
+					holder.t4=(TextView) arg1.findViewById(R.id.dingdanzhuangtai_text);
+					holder.t5=(TextView) arg1.findViewById(R.id.butt);
+					holder.po=(ImageView) arg1.findViewById(R.id.shangpin_image);
+					arg1.setTag(holder);
+					
+				}else
+				{
+					holder=(ViewHodler) arg1.getTag();
+				}
+		//System.out.println(list.get(arg0).toString());
+		
+		
+=======
+
+>>>>>>> .r87
+<<<<<<< .mine
+=======
+		try {
+			
+			
+			
+			
+
+			ViewHolder viewHolder = null;
+
+			if (arg1 == null) {
+				viewHolder = new ViewHolder();
+
+				arg1 = inflater.inflate(R.layout.maijiadingdan_styl, null);
+				viewHolder.textView1 = (TextView) arg1
+						.findViewById(R.id.dingdanhao_text);
+				viewHolder.textView2 = (TextView) arg1
+						.findViewById(R.id.dingdanjine_text);
+				viewHolder.textView3 = (TextView) arg1
+						.findViewById(R.id.xiadanshijian_text);
+				viewHolder.textView4 = (TextView) arg1
+						.findViewById(R.id.dingdanzhuangtai_text);
+				viewHolder.textView5 = (TextView) arg1.findViewById(R.id.butt);
+				viewHolder.po = (ImageView) arg1
+						.findViewById(R.id.shangpin_image);
+				viewHolder.fi=FinalBitmap.create(mContext);
+				arg1.setTag(viewHolder);
+
+			} else {
+				viewHolder = (ViewHolder) arg1.getTag();
+			}
+
+			viewHolder.textView1.setText(list.get(arg0).getString("order_sn"));
+
+			viewHolder.textView2.setText(list.get(arg0).getString(
+					"order_amount"));
+
+			viewHolder.textView3.setText(list.get(arg0).getString("add_time"));
+
+			viewHolder.textView4.setText(list.get(arg0)
+					.getString("status_name"));
+
+>>>>>>> .r87
+		
+<<<<<<< .mine
+		
+		try {
+			holder.t2.setText(list.get(arg0).getString("order_sn"));
+		
+			holder.tv.setText(list.get(arg0).getString("order_amount"));
+		
+		
+		
+			holder.t3.setText(list.get(arg0).getString("add_time"));
+		
+		
+		
+			holder.t4.setText(list.get(arg0).getString("status_name"));
+		
+		
+		
+	      String sta = null;
+		
+			sta = list.get(arg0).getString("status");
+		
+	      if(sta.equals("11")){
+	    	  holder.t5.setText("付款");
+	    	   
+	      }
+	      if(sta.equals("30")){
+	    	  holder.t5.setText("确认收货");
+	      }
+	      if(sta.equals("0")){
+	    	  holder.t5.setText("关闭");
+	      }
+	      if(sta.equals("40")){
+	    	  holder.t5.setText("成功");
+	      }
+	      if(sta.equals("20")){
+	    	  holder.t5.setText("等待卖家发货");
+	    	  
+	      }
+		
+		
+	     
+	      
+	  
+		  
+=======
+
+		String	sta = list.get(arg0).getString("status");
+              //  Toast.makeText(mContext, sta, 0).show();
+			if (sta.equals("11")) {
+				
+				viewHolder.textView5.setText("付款");
+
+			}
+			if (sta.equals("30")) {
+				viewHolder.textView5.setText("确认收货");
+			}
+			if (sta.equals("0")) {
+				viewHolder.textView5.setText("关闭");
+			}
+			if (sta.equals("40")) {
+				viewHolder.textView5.setText("成功");
+			}
+			if (sta.equals("20")) {
+				viewHolder.textView5.setText("等待卖家发货");
+
+			}
+
+			String name = list.get(arg0).getString("order_goods");
+
+			JSONObject jsonObject = new JSONObject(name);
+
+			ArrayList<JSONObject> warrlist = new ArrayList<JSONObject>();
+
+			Iterator<String> it = jsonObject.keys();
+			while (it.hasNext()) {
+				String key = it.next();
+				JSONObject object = jsonObject.getJSONObject(key);
+				warrlist.add(object);
+
+			}
+
+			// String hh= warrlist.get(arg0).getString("goods_name");
+			JSONArray array = new JSONArray(warrlist);
+			ArrayList<JSONObject> ll = new ArrayList<JSONObject>();
+			for (int x = 0; x < array.length(); x++) {
+				JSONObject jsonObject2 = array.getJSONObject(x);
+			String	nnn = jsonObject2.getString("goods_name");
+			String	uu = jsonObject2.getString("goods_image");
+				ll.add(jsonObject2);
+				//Toast.makeText(mContext, uu, 0).show();
+				
+				viewHolder.fi.display(viewHolder.po, uu);
+		    
+			}
+
+>>>>>>> .r87
+			
+
+			
+<<<<<<< .mine
+		JSONObject jsonObject=new JSONObject(name);
+		
+		ArrayList<JSONObject> warrlist = new ArrayList<JSONObject>();
+		
+		Iterator<String> it = jsonObject.keys();
+		while (it.hasNext()) {
+			String key = it.next();
+			JSONObject object = jsonObject.getJSONObject(key);
+			warrlist.add(object);
+		
+		}
+		
+	//String hh=	warrlist.get(arg0).getString("goods_name");
+		JSONArray array=new JSONArray(warrlist);
+		ArrayList<JSONObject> ll=new ArrayList<JSONObject>();
+	for(int x=0;x<array.length();x++){
+		  JSONObject jsonObject2=   array.getJSONObject(x);
+	 nnn=	  jsonObject2.getString("goods_name");
+	  uu=	  jsonObject2.getString("goods_image");
+		  ll.add(jsonObject2);
+	}
+		
+	//String ss=	ll.get(arg0).getString("goods_name");
+		
+			//t5.setText(nnn);
+		
+		System.out.println("=2=3=3=3"+nnn);
+	//	HashMap<String, Object> map=new HashMap<String, Object>();
+		
+		finalBitmap.display(holder.po, uu); 
+			
+=======
+
+>>>>>>> .r87
+		} catch (JSONException e) {
+
+			e.printStackTrace();
+		}
+<<<<<<< .mine
+		
+		
+		
+		
+	
+		
+		
+=======
+
+>>>>>>> .r87
+		
+	
+		
+		return arg1;
+
+	}
+	
+	
+	static class ViewHodler
+	{
+		ImageView po;
+		TextView tv;
+		TextView t2;
+		TextView t3;
+		TextView t4;
+		TextView t5;
+	}
+
+	public class ViewHolder {
+		public TextView textView1;
+		public TextView textView2;
+		public TextView textView3;
+		public TextView textView4;
+		public TextView textView5;
+		public ImageView po;
+		public FinalBitmap fi;
+
+	}
+}

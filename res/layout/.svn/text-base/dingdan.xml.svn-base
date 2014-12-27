@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#7c7c7c" >
+
+            <RadioButton
+                android:id="@+id/dingdan_fanhui"
+                android:drawableLeft="@drawable/fanhui"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+               android:layout_centerVertical="true"    
+               android:button="@null"
+                android:paddingLeft="5dp"
+              	android:gravity="left|center_vertical"
+              	android:background="@drawable/wode_title_btn_selector"
+                android:textColor="#fbfdfc"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+	            android:layout_marginBottom="10dp"
+	            android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="订单管理"
+                android:textColor="#fbfdfc"
+                android:textSize="22sp" />
+
+            
+        </RelativeLayout>
+
+    
+    
+    
+     <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/group1"
+        android:background="@drawable/sha2"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/dingdan_01"
+            style="@style/main_bottom_radoibtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/radio_group_selector"
+            android:button="@null"
+             android:checked="true"
+             
+            android:gravity="center"
+            android:onClick="on1"
+            android:text="所有" />
+
+        <RadioButton
+            android:id="@+id/dingdan_02"
+            style="@style/main_bottom_radoibtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="-5dp"
+            android:layout_weight="1"
+           
+            android:background="@drawable/radio_group_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:onClick="on2"
+            android:text="待付款" />
+        <RadioButton
+            android:id="@+id/dingdan_03"
+            style="@style/main_bottom_radoibtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="-5dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_group_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:onClick="on3"
+            android:text="待发货" />
+        <RadioButton
+            android:id="@+id/dingdan_04"
+            style="@style/main_bottom_radoibtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="-5dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_group_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:onClick="on4"
+            android:text="已完成" />
+        <RadioButton
+            android:id="@+id/dingdan_05"
+            style="@style/main_bottom_radoibtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="-5dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_group_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:onClick="on5"
+            android:text="已取消" />
+    </RadioGroup>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ListView
+                android:id="@+id/list_dingdan_01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible" >
+            </ListView>
+
+            <ListView
+                android:id="@+id/list_dingdan_02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" >
+            </ListView>
+            <ListView
+                android:id="@+id/list_dingdan_03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" >
+            </ListView>
+            <ListView
+                android:id="@+id/list_dingdan_04"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" >
+            </ListView>
+            <ListView
+                android:id="@+id/list_dingdan_05"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" >
+            </ListView>
+        </FrameLayout>
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    </LinearLayout>
+
+</LinearLayout>

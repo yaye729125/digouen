@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white" >
+    
+    
+    <include layout="@layout/title_onlyback"/>
+    
+    
+    
+    <LinearLayout 
+        android:id="@+id/makeorder_chooseaddress_layout_addaddress"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/cart_gray"
+        
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="+ 添加地址"
+            android:textColor="@color/base_gray"
+           
+            
+            />
+        
+    </LinearLayout>
+    
+    <ListView 
+        android:id="@+id/makeorder_chooseaddress_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="@drawable/listselector"
+        ></ListView>
+
+</LinearLayout>

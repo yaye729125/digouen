@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#7c7c7c" >
+
+        <RadioButton
+            android:id="@+id/wodexiaoxi_fanhui"
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+           
+            android:button="@null"
+          
+            android:gravity="left|center_vertical"
+            android:paddingLeft="5dp"
+            android:textColor="#fbfdfc"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="注册"
+            android:textColor="#fbfdfc"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+    
+    
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/base_edittext_selector"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        
+        >
+        
+        
+        	<ImageView 
+        	    android:layout_width="30dp"
+        	    android:layout_height="30dp"
+        	    android:src="@drawable/my_phone"
+        	    android:layout_gravity="center_vertical"
+        	    
+        	    />
+        
+	         <EditText
+	        
+		      
+		        android:id="@+id/my_phone"
+		       
+		        android:background="@null"
+		        android:textSize="14sp"
+		        android:hint="填写中国大陆手机号，其他用户不可见"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		      
+		        
+		      
+		        android:ems="10" >
+	
+	    	</EditText>
+    
+         
+        
+        
+    </LinearLayout>
+   
+    
+    
+     <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/base_edittext_selector"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        
+        >
+        
+        
+        	<ImageView 
+        	    android:layout_width="30dp"
+        	    android:layout_height="30dp"
+        	    android:src="@drawable/my_password"
+        	    android:layout_gravity="center_vertical"
+        	    
+        	    />
+    <EditText
+        android:id="@+id/my_password"
+        
+         android:textSize="14dp"
+       
+        android:hint="6-20位密码，建议数字、字母、符号..."
+      
+        android:background="@null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    
+        android:ems="10" >
+
+    	</EditText>
+    	</LinearLayout>
+    	
+     
+       <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/base_edittext_selector"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        
+        >
+        
+        
+        	<ImageView 
+        	    android:layout_width="30dp"
+        	    android:layout_height="30dp"
+        	    android:src="@drawable/my_user"
+        	    android:layout_gravity="center_vertical"
+        	    
+        	    />
+    <EditText
+        android:id="@+id/my_username"
+       
+        android:background="@null"
+        android:hint="用户名，3-25个字符"
+        android:textSize="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+      
+        android:ems="10" >
+
+    </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/my_yanzhenma"
+            android:layout_width="0dp"
+            android:background="@drawable/base_edittext_selector"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:hint="激活码"
+           	android:paddingLeft="5dp"
+            android:layout_weight="1">
+            
+        </EditText>
+
+        <Button
+            android:id="@+id/my_button"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/base_edittext_selector"
+          	android:textColor="@color/btn_orange_textcolor_selector"
+            android:text="发送激活码" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:paddingTop="16dp"
+        android:gravity="bottom">
+
+        <TextView
+            android:paddingLeft="20dp"
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:text="我已同意并阅读"
+          
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            />
+
+        
+        
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           	android:text="地狗用户协议"
+            android:background="@null"
+            android:textColor="@color/item_detail_add_cart_bg"
+            android:layout_marginLeft="5dp"
+            
+            
+            
+            />
+    </LinearLayout>
+
+    <RadioButton
+        android:id="@+id/zhuce_radioButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/item_detail_bottom_layout_addcart_selector"
+        android:layout_marginLeft="20dp"
+        android:button="@null"
+        android:gravity="center"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/white"
+        android:text="注册" />
+    
+</LinearLayout>

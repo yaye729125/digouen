@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#ffffff">
+
+    <!-- 顶部导航 -->
+
+    <include layout="@layout/navigate_title"/>
+
+ <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+      <com.gyh.digou.fenlei.NestRadioGroup
+	      android:id="@+id/fenlei_fragment_choose_result_radiogroup"
+	      android:layout_width="match_parent"
+	      android:layout_height="wrap_content"
+	      android:layout_alignParentLeft="true"
+	      android:layout_alignParentTop="true"
+	      android:gravity="center_horizontal"
+	      android:orientation="horizontal"
+	      android:background="#e4e4e4">
+	
+            
+            
+	      <RadioButton
+	          android:id="@+id/fenlei_fragment_choose_result_radiobtn_xiangguan"
+	          android:layout_width="0dp"
+	          android:layout_height="wrap_content"
+	          android:text="相关" 
+	          android:textColor="@color/fenlei_menu_textcolor"
+	          android:checked="true"
+	          android:layout_weight="1"
+	          android:button="@null"
+	      	  android:padding="10dp"
+	      	  android:gravity="center_horizontal"
+	      	 />
+	
+	      
+	      <View 
+	          android:layout_width="1px"
+	          android:layout_height="match_parent"
+	          android:layout_marginTop="8dp"
+	          android:layout_marginBottom="8dp"
+	          android:background="@color/bg_Gray"
+	          />
+	      <RadioButton
+	          android:id="@+id/fenlei_fragment_choose_result_radiobtn_xiaoliang"
+	          android:layout_width="0dp"
+	          android:layout_height="wrap_content"
+	          android:text="销量"
+	          android:textColor="@color/fenlei_menu_textcolor"
+	          android:layout_weight="1"
+	          android:button="@null"
+	      	  android:padding="10dp"
+	      	  android:gravity="center_horizontal" />
+		<View 
+	          android:layout_width="1px"
+	          android:layout_height="match_parent"
+	          android:layout_marginTop="8dp"
+	          android:layout_marginBottom="8dp"
+	          android:background="@color/bg_Gray"
+	          />
+		
+		
+		
+			 <RelativeLayout 
+			   
+	          android:layout_width="0dp"
+	          android:layout_height="match_parent"
+	          android:gravity="center_horizontal"
+	       
+	          android:layout_weight="1"
+	          >
+	      
+	     <ImageView
+	          android:id="@+id/fenlei_fragment_choose_result_imv_jg_sort"
+	          android:layout_width="wrap_content"
+	          android:layout_height="wrap_content"
+	          android:src="@drawable/sort_button_price_up"
+	          android:layout_toRightOf="@+id/fenlei_fragment_choose_result_radiobtn_jiage"
+			  android:layout_marginTop="15dp"
+			  
+			  android:visibility="gone"
+	          />
+
+	     <RadioButton
+	         android:id="@+id/fenlei_fragment_choose_result_radiobtn_jiage"
+	         android:layout_width="wrap_content"
+	         android:layout_height="match_parent"
+	         android:layout_alignParentTop="true"
+	         android:layout_alignParentLeft="true"
+	         android:button="@null"
+	         android:paddingLeft="10dp"
+	         android:paddingTop="10dp"
+	         android:paddingBottom="10dp"
+	         android:text="价格"
+	         android:textColor="@color/fenlei_menu_textcolor" />
+ 
+	     </RelativeLayout> 
+	      <View 
+	          android:layout_width="1px"
+	          android:layout_height="match_parent"
+	          android:layout_marginTop="8dp"
+	          android:layout_marginBottom="8dp"
+	          android:background="@color/bg_Gray"
+	          />
+	      <RadioButton
+	          android:id="@+id/fenlei_fragment_choose_result_radiobtn_xinpin"
+	          android:layout_width="0dp"
+	          android:layout_height="wrap_content"
+	          android:text="新品"
+	          android:textColor="@color/fenlei_menu_textcolor"
+	          android:layout_weight="1"
+	          android:button="@null"
+	      	  android:padding="10dp"
+	      	  android:gravity="center_horizontal" />
+	    </com.gyh.digou.fenlei.NestRadioGroup> 
+        
+    </RelativeLayout>
+    
+        
+      
+    
+    
+    <com.handmark.pulltorefresh.library.PullToRefreshListView 
+        android:id="@+id/fenlei_fragment_choose_result_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+      	android:listSelector="@drawable/listselector"
+        
+        
+        ></com.handmark.pulltorefresh.library.PullToRefreshListView>
+    
+     <!-- <android.support.v4.view.ViewPager
+        android:id="@+id/fenlei_fragment_choose_result_pager"
+
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"        
+        />  -->
+  <!--  <LinearLayout
+        android:id="@+id/fenlei_shangpinitem_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+       
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:background="#fff" >
+
+    </LinearLayout> -->
+    
+</LinearLayout>
+    
+
+

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#7c7c7c" >
+
+        <RadioButton
+            android:id="@+id/wodexiaoxi_fanhui"
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/wode_title_btn_selector"
+            android:button="@null"
+            android:drawableLeft="@drawable/fanhui"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="5dp"
+            android:textColor="#fbfdfc"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="我的消息"
+            android:textColor="#fbfdfc"
+            android:textSize="22sp" />
+    </RelativeLayout>
+<!-- 
+<TabHost
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+ 
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:background="@drawable/sha1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </TabWidget>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:id="@+id/tab1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <ListView android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/wodexiaoxi_list1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tab2"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <ListView android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/wodexiaoxi_list2"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tab3"
+                  android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                
+                 <ListView android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/wodexiaoxi_list3"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</TabHost>
+-->
+
+
+<RadioGroup android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:gravity="center"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/sha2"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal">
+       
+    <RadioButton android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:onClick="on1"
+        android:button="@null"
+       
+        android:id="@+id/xiaioxibutton_1"
+         style="@style/main_bottom_radoibtn"
+         android:gravity="center"
+         android:background="@drawable/radio_group_selector" 
+        
+        android:checked="true"
+        android:layout_height="match_parent"
+        android:text="未读消息"
+        />
+    
+    <TextView android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:text=""
+        android:textColor="#000000"
+        android:background="#cccccc"/>
+    
+    
+    
+    
+    
+    <RadioButton android:layout_width="wrap_content"
+       
+        android:id="@+id/xiaioxibutton_2"
+         style="@style/main_bottom_radoibtn"
+         android:gravity="center"
+         android:background="@drawable/radio_group_selector" 
+         android:onClick="on2"
+         android:button="@null"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="私人消息"
+        />
+    
+     <TextView android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:text=""
+        android:textColor="#000000"
+        android:background="#cccccc"/>
+     
+    <RadioButton android:layout_width="wrap_content"
+       
+         android:onClick="on3"
+          style="@style/main_bottom_radoibtn"
+         android:gravity="center"
+         android:background="@drawable/radio_group_selector" 
+          android:button="@null"
+        android:id="@+id/xiaioxibutton_3"
+       
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="系统消息"
+        />
+    
+    
+    
+    
+    
+</RadioGroup>
+
+
+
+
+
+
+
+  <LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+      
+      
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <ListView
+            android:id="@+id/listxiaoxi_1"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ListView>         
+        <ListView
+            android:id="@+id/listxiaoxi_2"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ListView>         
+        <ListView
+            android:id="@+id/listxiaoxi_3"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ListView>         
+    
+    </FrameLayout>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</LinearLayout>
+</LinearLayout>

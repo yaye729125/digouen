@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    
+    <dimen name="item_detail_name">18sp</dimen>
+     <dimen name="item_detail_ad">14sp</dimen>
+      <dimen name="item_detail_price">18sp</dimen>
+        <dimen name="item_detail_yaotext">15sp</dimen>
+        <dimen name="item_detail_format">17sp</dimen>
+        asdf
+           <dimen name="list_keep_width">100.0dip</dimen>
+    	<dimen name="leftlist_img_width">100.0dip</dimen>
+</resources>

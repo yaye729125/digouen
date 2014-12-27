@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+       	android:paddingTop="15dp"
+       	android:paddingBottom="15dp"
+       	android:gravity="center_horizontal"
+       	android:textSize="20sp"
+        android:text="@string/cart_change_cartnum_title" />
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:background="@color/bg_Gray"
+      
+      /><LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        >
+        
+         <TextView
+                   android:id="@+id/cart_change_cartnum_tv_reduce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/zhijiao_gray"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12dp"
+                    android:textColor="@color/tv_Black"
+                    android:paddingRight="12dp"
+                    android:text="一" />
+                <EditText
+                   android:id="@+id/cart_change_cartnum_edit_num"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/zhijiao"
+                    android:textColor="@color/tv_Black"
+                    android:inputType="number"
+                    android:text="1" />
+                <TextView
+                 android:id="@+id/cart_change_cartnum_tv_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                     android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:textColor="@color/tv_Black"
+                    android:background="@drawable/zhijiao_gray"
+                    android:text="+" />
+        
+        
+    </LinearLayout>
+	<View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:background="@color/bg_Gray"
+      
+      />
+
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	      android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+	    >
+	<Button
+	    android:id="@+id/cart_change_cartnum_btn_cancle"
+	    android:layout_width="0dp"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1"
+	    android:background="@drawable/item_detail_bottom_layout_addcart_selector"
+	    android:text="取消"
+	    android:textColor="@color/white"
+	    android:paddingTop="12dp"
+	    android:paddingBottom="12dp"
+	    android:layout_marginLeft="15dp"
+	    android:layout_marginRight="15dp" />
+	<Button
+	    android:id="@+id/cart_change_cartnum_btn_ok"
+	    android:layout_width="0dp"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1"
+	     android:textColor="@color/white"
+	      android:background="@drawable/item_detail_bottom_layout_yao_selector"
+	    android:paddingTop="12dp"
+	    android:paddingBottom="12dp"
+	     android:layout_marginLeft="15dp"
+	    android:layout_marginRight="15dp"
+	    android:text="确定" />
+	</LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shangjiabeijing"
+    android:orientation="vertical" >
+	<LinearLayout
+    
+     android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#7c7c7c"
+    android:orientation="horizontal">
+     <Button
+               android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="设置"
+                android:paddingLeft="5dp"
+              	android:gravity="center"
+              	android:background="@drawable/wode_title_btn_selector"
+                android:textColor="#fbfdfc"
+                android:textSize="15sp" />
+     
+     <TextView
+                
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="我的店铺"
+                android:textColor="#fbfdfc"
+                android:textSize="22sp" />
+     
+     
+     <ImageView 
+         android:id="@+id/shangjia_caigou"
+          android:layout_width="0dp"
+                   android:layout_weight="0.8"
+         android:layout_height="wrap_content"
+         android:src="@drawable/caigoumoshi"
+         />
+</LinearLayout>
+    
+
+
+
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    
+    >
+    
+    
+    
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="2.5"
+    android:background="@drawable/gerenzhuantai_image"
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="horizontal" >
+
+    <com.gyh.digou.gouwuche.MyCircleImageView
+        android:id="@+id/shangjia_touxiang"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+      	android:scaleType="centerCrop"
+        android:src="@drawable/touxiang" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="10dp" >
+
+        <TextView
+            android:id="@+id/shangjia_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:textSize="17sp"
+            android:text="admin" />
+
+        <TextView
+            android:id="@+id/shangjia_huiyuan"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:textColor="@color/white"
+            android:text="地狗会员" />
+
+        <TextView
+            android:id="@+id/shangjia_shuangdian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+               android:textColor="@color/white"
+            android:text="爽点" />
+
+        <TextView
+            android:id="@+id/shangjia_zijin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+               android:textColor="@color/white"
+            android:text="未提现金额:" />
+    </LinearLayout>
+</LinearLayout>
+    
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="7"
+        android:orientation="vertical"
+       android:gravity="center"
+       android:paddingTop="10dp"
+       android:paddingBottom="10dp"
+       
+        android:layout_height="0dp" >
+        
+        
+        
+        
+        
+        
+        
+        
+        <GridView 
+            android:id="@+id/shangjiamoshi_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+        
+          android:scrollbars="none"
+	        android:numColumns="2"	
+	      android:verticalSpacing="20dp"
+	      android:listSelector="@drawable/listselector"
+            
+            >
+            
+            
+            
+        </GridView>
+        
+        
+        
+        
+      <!--  <LinearLayout android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal" >
+           <RadioButton 
+               
+               
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:button="@null"
+               android:layout_marginLeft="10dp"
+               android:layout_marginTop="10dp"
+               android:id="@+id/dingdanguanli_button"
+               android:layout_height="wrap_content"
+               android:drawableTop="@drawable/dianpushouye_image"
+             
+               android:gravity="center"
+               android:background="@null"
+               android:text="订单管理"/>
+           <RadioButton android:layout_width="0dp"
+               android:layout_marginLeft="10dp"
+               android:layout_marginTop="10dp"
+               android:layout_weight="1"
+                android:button="@null"
+                 android:drawableTop="@drawable/ic_launcher"
+               android:gravity="center"
+               android:layout_height="wrap_content"
+               android:layout_marginRight="10dp"
+               android:text="店铺首页"/>
+       </LinearLayout>
+       
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" >
+      <RadioButton android:layout_width="wrap_content"
+               android:layout_weight="1"
+               android:id="@+id/shangjia_shangpinguanli"
+               android:layout_marginLeft="10dp"
+               android:layout_marginTop="10dp"
+               android:button="@null"
+               android:drawableTop="@drawable/ic_launcher"
+               android:gravity="center"
+               android:layout_height="80dp"
+               android:text="商品管理"/>
+           <RadioButton android:layout_width="wrap_content"
+               android:layout_marginLeft="10dp"
+               android:id="@+id/digoushuangdian"
+               android:layout_marginTop="10dp"
+               android:layout_weight="1"
+               android:layout_height="80dp"
+               android:button="@null"
+               android:drawableTop="@drawable/ic_launcher"
+               android:gravity="center"
+               android:layout_marginRight="10dp"
+               android:text="地狗爽点"/>
+</LinearLayout>
+       
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" >
+    <RadioButton android:layout_width="wrap_content"
+               android:layout_weight="1"
+               android:id="@+id/shangjizijinguanli"
+               android:layout_marginLeft="10dp"
+               android:layout_marginTop="10dp"
+               android:layout_height="80dp"
+               android:button="@null"
+               android:drawableTop="@drawable/ic_launcher"
+               android:gravity="center"
+               android:text="资金管理"/>
+           <RadioButton android:layout_width="wrap_content"
+               android:id="@+id/zhanghuguanli_button"
+               android:layout_marginLeft="10dp"
+               android:layout_marginTop="10dp"
+               android:layout_weight="1"
+               android:layout_height="80dp"
+               android:button="@null"
+               android:drawableTop="@drawable/ic_launcher"
+               android:gravity="center"
+               android:layout_marginRight="10dp"
+               android:text="账户管理"/>
+</LinearLayout> -->
+       
+</LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        
+     <RelativeLayout 
+         android:layout_width="80dp"
+         android:layout_height="wrap_content"
+      
+         >
+          <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            
+            android:background="@drawable/ic_launcher" />
+          <TextView 
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/item_detail_bottom_layout_yao_selector"
+              android:text="2"
+              android:textColor="@color/white"
+              android:layout_marginRight="8dp"
+              android:layout_marginTop="5dp"
+              android:layout_alignParentRight="true"
+              android:layout_alignParentTop="true"
+              />
+         
+         
+     </RelativeLayout>
+       
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+          
+        
+            android:text="消息通知"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="app_name">地狗</string>
+	<string name="item_detail_format">规格   %1$   %2$   %3$</string>
+	<string name="item_detail_area">送至:  %1$</string>
+	<string name="item_detail_stock">      %1$</string>
+	<string name="item_detail_fare">运费:  0元</string>
+	<string name="item_detail_shopname">%1$</string>
+	<string name="item_detail_shopowner_phonenum_tv">商家电话:</string>
+	
+	<string name="item_detail_shopowner_phonenum">%1$</string>
+	<string name="item_detail_add_cart">加入购物车</string>
+	
+	<string name="item_detail_yao">加入购物车   摇一摇  价格您做主</string>
+	<string name="cart_yao">结算前   摇一摇  享受更多优惠</string>
+	<string name="cart_yao_btntv">摇一摇获得最大优惠</string>
+	<string name="item_detail_yaoagin">再摇一次</string>
+	<string name="item_detail_choose_format_goods_id">商品编号:%1$</string>
+	<string name="item_detail_choose_format_radiobtn_text">%1$ %2$ %3$ %4$ %5$ %6$ %7$ %8$</string>
+	<string name="cart_heji">合计:</string>
+	<string name="cart_jiesuan_btntv">结算(0)</string>
+	<string name="cart_title">购物车</string>
+	
+	<string name="no_network">当前无网络</string>
+	<string name="shouye_edit_search_hint">搜索商品/店铺"</string>
+	<string name="shangpinmingxi">七波辉童鞋2014秋季新款女男童网布运动鞋中小大儿童鞋子 各种随便挑随便选，优惠多多</string>
+	<string name="shangpinnewprice">¥ 127.00</string>
+	<string name="shangpinoldprice">¥ 335.00</string>
+	
+	
+	<string name="cart_del_title">确定要删除该商品?</string>
+    <string name="cart_del_delete">删除</string>
+    <string name="cart_del_cancel">取消</string>
+    <string name="item_detail_call_shopowner_dialog_tv_title">确定拨打电话:%1$</string>
+    <string name="cart_change_cartnum_title">更改购买数量</string>
+    
+    
+    <string name="search_empty_view_tv">抱歉，未找到相关内容</string>
+    
+     <string name="shopping_cart_product_edit">编辑</string>
+    
+    <string  name="cart_edit_tv_fin">完成</string>
+    <string  name="cart_edit_tv">编辑</string>
+    
+    
+    
+    
+    
+    
+    
+       
+   
+</resources>

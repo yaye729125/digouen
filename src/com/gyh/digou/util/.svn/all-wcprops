@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/util
+END
+Tools.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/util/Tools.java
+END
+UploadUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/util/UploadUtil.java
+END
+ACache.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/util/ACache.java
+END
+NetworkUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/util/NetworkUtil.java
+END

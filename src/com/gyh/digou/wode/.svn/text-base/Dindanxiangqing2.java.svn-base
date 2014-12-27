@@ -1,0 +1,126 @@
+package com.gyh.digou.wode;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import net.tsz.afinal.FinalHttp;
+import net.tsz.afinal.http.AjaxCallBack;
+import net.tsz.afinal.http.AjaxParams;
+
+import org.json.JSONObject;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.gyh.digou.R;
+import com.gyh.digou.app.MyApp;
+import com.gyh.digou.util.Tools;
+
+public class Dindanxiangqing2 {
+	public class DingdanXiangqing extends Activity{
+		TextView textView1,textView2,textView3,textView4;
+		ListView listView;
+		@Override
+		protected void onCreate(Bundle savedInstanceState) {
+			// TODO Auto-generated method stub
+			super.onCreate(savedInstanceState);
+			setContentView(R.layout.dingdanxiangqing2);
+			
+			Intent intent=getIntent();
+			String order_id2=intent.getStringExtra("order_id2");
+			
+			   textView1=(TextView) findViewById(R.id.hao);
+			    textView2=(TextView) findViewById(R.id.day);
+			    textView3=(TextView) findViewById(R.id.dianpu);
+			    textView4=(TextView) findViewById(R.id.money);
+			listView=(ListView) findViewById(R.id.xiangqing_list);
+			
+			
+			
+			
+			
+			  AjaxParams params = new AjaxParams();
+				MyApp myApp = (MyApp) this.getApplication();
+				String token = myApp.getInfo().getData().getToken();
+				MyApp app = (MyApp) DingdanXiangqing.this.getApplication();
+				
+				params.put("token", token);
+				params.put("order_id", order_id2);
+//				params.put("type", "shipped");
+//				params.put("type", "accepted");
+				Toast.makeText(DingdanXiangqing.this, order_id2, 0).show();
+				FinalHttp fh = new FinalHttp();
+				fh.post(Tools.getBaseUrl() + "?app=buyer_order&act=api_view",
+						params, new AjaxCallBack<String>() {
+
+							public void onFailure(Throwable t, int errorNo,
+									String strMsg) {
+								Toast.makeText(DingdanXiangqing.this, strMsg,
+										Toast.LENGTH_SHORT).show();
+							}
+
+							@Override
+							public void onSuccess(String t) {
+								 System.out.println("---819-------"+t+"--");
+								
+	       try {
+		
+	    	   
+	    	   JSONObject jsonObject=new JSONObject(t);
+	    	   
+	               JSONObject jsonObject2=	   jsonObject.getJSONObject("data");
+	    	           
+	               String order_sn=jsonObject2.getString("order_sn");
+	                    String name=jsonObject2.getString("store_name");
+	                  String add_time=jsonObject2.getString("add_time");
+	                  String order_amount=jsonObject2.getString("order_amount");
+	                  String data=jsonObject2.getString("data");
+	                  textView2.setText(add_time);
+	                    textView3.setText(name);
+	                    textView1.setText(order_sn);
+	                    textView4.setText(order_amount);
+	    	   
+	    	   
+	                    
+	                 Toast.makeText(DingdanXiangqing.this, data, 0).show();
+	                    
+	                    
+	                 System.out.println("-0-8-7"+data);
+	                 
+	                 
+	                 JSONObject jsonObject3=new JSONObject(data);
+	                 
+	            JSONObject jsonObject4= jsonObject3.getJSONObject("goods_list");
+	                 
+	            ArrayList<JSONObject> warrlists = new ArrayList<JSONObject>();
+				// warrlist.add((JSONObject) object);
+				Iterator<String> it = jsonObject4.keys();
+				while (it.hasNext()) {
+					String key = it.next();
+					JSONObject object = jsonObject4.getJSONObject(key);
+					warrlists.add(object);
+					
+					DindanxiangxiAdapter adapter=new DindanxiangxiAdapter(DingdanXiangqing.this, warrlists);
+					listView.setAdapter(adapter);
+					
+					
+				}
+	                 
+	              
+	    	   
+	        } catch (Exception e) {
+		// TODO: handle exception
+	        }
+						 
+								 
+							}
+
+						});	
+				
+				
+		}}}
+

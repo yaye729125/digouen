@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/view
+END
+MyScrollView.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/view/MyScrollView.java
+END
+AbOnScrollListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/view/AbOnScrollListener.java
+END
+HackyViewPager.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/view/HackyViewPager.java
+END
+AbOnItemClickListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/view/AbOnItemClickListener.java
+END
+MyListView.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/view/MyListView.java
+END
+AbAppData.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/view/AbAppData.java
+END
+AbSlidingPlayView.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/view/AbSlidingPlayView.java
+END
+ScaleView.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/view/ScaleView.java
+END
+Compat.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/view/Compat.java
+END
+ScrollerProxy.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/view/ScrollerProxy.java
+END
+VersionedGestureDetector.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/view/VersionedGestureDetector.java
+END
+SDK16.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/view/SDK16.java
+END
+AbOnTouchListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/view/AbOnTouchListener.java
+END
+AbInnerViewPager.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/view/AbInnerViewPager.java
+END
+IScaleView.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/view/IScaleView.java
+END
+AbOnChangeListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/view/AbOnChangeListener.java
+END
+AbViewPagerAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/view/AbViewPagerAdapter.java
+END
+ScaleViewAttacher.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/view/ScaleViewAttacher.java
+END

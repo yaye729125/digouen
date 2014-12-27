@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/white">
+    
+    
+    
+    <include layout="@layout/base_title"/>
+    
+ <RelativeLayout 
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     
+     android:gravity="center_vertical"
+     android:paddingTop="5dp"
+     android:paddingBottom="5dp"
+     >
+     
+     <ImageView 
+         android:id="@+id/wodegouliangen_imv_shengyu"
+         android:layout_width="35dp"
+         android:layout_height="35dp" 
+         android:src="@drawable/shuangdian"
+         android:layout_marginLeft="10dp"
+         android:layout_marginTop="5dp"
+         android:layout_marginBottom="5dp"
+           android:layout_centerVertical="true"
+         />
+     
+     <TextView
+           android:id="@+id/wodegouliangen_tv_shengyu"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="剩余狗粮"
+         android:layout_toRightOf="@+id/wodegouliangen_imv_shengyu"
+         android:layout_marginLeft="10dp"
+         android:layout_centerVertical="true"
+         android:textSize="18sp"
+         
+         />
+     
+     
+     	<TextView
+     	      android:id="@+id/wodegouliangen_tv_shengyu_content"
+     	    android:layout_width="wrap_content"
+     	    android:layout_height="wrap_content"
+     	    android:text="text"
+     	   android:layout_alignParentRight="true"
+     	   android:layout_marginRight="60dp"
+     	     android:layout_centerVertical="true"
+     	    />
+     
+ </RelativeLayout>
+    
+    
+    <View
+        
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/base_bg_gray"
+        android:layout_marginLeft="55dp"
+        />
+    
+    
+     <RelativeLayout 
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     
+     android:gravity="center_vertical"
+     android:paddingTop="5dp"
+     android:paddingBottom="5dp"
+     >
+     
+     <ImageView 
+         android:id="@+id/wodegouliangen_imv_shengyu"
+         android:layout_width="35dp"
+         android:layout_height="35dp" 
+         android:src="@drawable/shuangdian"
+         android:layout_marginLeft="10dp"
+         android:layout_marginTop="5dp"
+         android:layout_marginBottom="5dp"
+           android:layout_centerVertical="true"
+         />
+     
+     <TextView
+           android:id="@+id/wodegouliangen_tv_tuisong"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="狗粮推送数量/客人"
+         android:layout_toRightOf="@+id/wodegouliangen_imv_shengyu"
+         android:layout_marginLeft="10dp"
+         android:layout_centerVertical="true"
+         android:textSize="18sp"
+         
+         />
+     
+     
+     	<TextView
+     	      android:id="@+id/wodegouliangen_tv_tuisong_content"
+     	    android:layout_width="wrap_content"
+     	    android:layout_height="wrap_content"
+     	    android:text="10"
+     	   android:layout_alignParentRight="true"
+     	   android:layout_marginRight="60dp"
+     	     android:layout_centerVertical="true"
+     	    />
+     
+ </RelativeLayout>
+    
+    
+    <View
+        
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/base_bg_gray"
+        android:layout_marginLeft="55dp"
+        />
+     <RelativeLayout 
+         
+     android:id="@+id/wodegouliang_chongzhi"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     
+     android:gravity="center_vertical"
+     android:paddingTop="5dp"
+     android:paddingBottom="5dp"
+     android:clickable="true"
+         android:background="@drawable/base_layout_selector"
+     >
+     
+     <ImageView 
+         android:id="@+id/wodegouliangen_imv_chongzhi"
+         android:layout_width="35dp"
+         android:layout_height="35dp" 
+         android:src="@drawable/shenqingchengweishangjia"
+         android:layout_marginLeft="10dp"
+         android:layout_marginTop="5dp"
+         android:layout_marginBottom="5dp"
+           android:layout_centerVertical="true"
+         />
+     
+     <TextView
+           android:id="@+id/wodegouliangen_tv_chongzhi"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="狗粮充值"
+         android:layout_toRightOf="@+id/wodegouliangen_imv_chongzhi"
+         android:layout_marginLeft="10dp"
+         android:layout_centerVertical="true"
+         android:textSize="18sp"
+         
+         />
+     
+     
+     	<ImageView
+     	      android:id="@+id/wodegouliangen_imv_chongzhi_guid"
+     	    android:layout_width="wrap_content"
+     	    android:layout_height="wrap_content"
+     	  
+     	   android:layout_alignParentRight="true"
+     	   android:layout_marginRight="20dp"
+     	     android:layout_centerVertical="true"
+     	     android:src="@drawable/ic_arrow"
+     	    />
+     
+ </RelativeLayout>
+    <View
+        
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/base_bg_gray"
+        android:layout_marginLeft="55dp"
+        />
+    
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="狗粮推送信息编辑"
+        android:textSize="20sp"
+        android:layout_marginLeft="15dp"
+        android:padding="3dp"
+        android:layout_marginTop="10dp"
+        />
+ 	<EditText 
+ 		        android:layout_width="match_parent"
+ 		        android:layout_height="wrap_content"
+ 		        android:layout_marginRight="15dp"
+ 		        android:background="@drawable/base_edittext_selector"
+ 		        android:hint="备注限制在45个字以内"
+ 		        android:padding="10dp"
+ 		        android:maxLines="5"
+ 		        android:lines="4"
+ 		        android:gravity="left|top"
+ 		         android:layout_marginLeft="10dp"
+ 		         android:layout_marginTop="5dp"
+ 		        />
+ 	
+ 	
+ 	<Button
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="wrap_content"
+ 	    android:text="保存"
+ 	    android:textColor="@color/white"
+ 	    android:background="@drawable/item_detail_bottom_layout_addcart_selector"
+ 	    android:padding="8dp"
+ 	    android:layout_marginLeft="20dp"
+ 	    android:layout_marginRight="20dp"
+ 	    android:layout_marginTop="15dp"
+ 	    android:textSize="17sp"
+ 	    />
+ 	 <View
+        
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/base_gray"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        />
+    
+</LinearLayout>

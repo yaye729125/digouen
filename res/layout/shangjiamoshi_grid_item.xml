@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center" >
+    
+
+    
+    <ImageView 
+        android:id="@+id/shangjiamoshi_gridview_item_imv"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/digouicon"
+        />
+    
+    	<TextView
+    	     android:id="@+id/shangjiamoshi_gridview_item_tv"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:text="asasd"
+    	    android:textColor="@color/white"
+    	    />
+    
+</LinearLayout>

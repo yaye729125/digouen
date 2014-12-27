@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/itemdetail/view
+END
+ScaleView.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/itemdetail/view/ScaleView.java
+END
+Compat.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/itemdetail/view/Compat.java
+END
+ScrollerProxy.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/itemdetail/view/ScrollerProxy.java
+END
+VersionedGestureDetector.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/itemdetail/view/VersionedGestureDetector.java
+END
+SDK16.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/itemdetail/view/SDK16.java
+END
+HackyViewPager.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/itemdetail/view/HackyViewPager.java
+END
+IScaleView.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/itemdetail/view/IScaleView.java
+END
+ProgressWebView.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/itemdetail/view/ProgressWebView.java
+END
+ScaleViewAttacher.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/digou/!svn/ver/2/Digou4.07/src/com/gyh/digou/itemdetail/view/ScaleViewAttacher.java
+END

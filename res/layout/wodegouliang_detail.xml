@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white" >
+    
+    <include layout="@layout/base_title"/>
+ <com.gyh.digou.fenlei.NestRadioGroup
+	      android:id="@+id/wodegouliang_detail_radiogroup"
+	      android:layout_width="match_parent"
+	      android:layout_height="wrap_content"
+	   
+	      android:gravity="center_horizontal"
+	      android:orientation="horizontal"
+	      android:background="@color/white">
+	
+            
+            
+	      <RadioButton
+	          android:id="@+id/wodegouliang_detail_radiobtn_xf"
+	          android:layout_width="0dp"
+	          android:layout_height="wrap_content"
+	          android:text="消费" 
+	          android:textColor="@color/fenlei_menu_textcolor"
+	          android:checked="true"
+	          android:layout_weight="1"
+	          android:button="@null"
+	      	  android:padding="10dp"
+	      	  android:gravity="center_horizontal"
+	      	 />
+	
+	      
+	      <View 
+	          android:layout_width="1px"
+	          android:layout_height="match_parent"
+	          android:layout_marginTop="8dp"
+	          android:layout_marginBottom="8dp"
+	          android:background="@color/bg_Gray"
+	          />
+	      <RadioButton
+	          android:id="@+id/wodegouliang_detail_radiobtn_hd"
+	          android:layout_width="0dp"
+	          android:layout_height="wrap_content"
+	          android:text="获得"
+	          android:textColor="@color/fenlei_menu_textcolor"
+	          android:layout_weight="1"
+	          android:button="@null"
+	      	  android:padding="10dp"
+	      	  android:gravity="center_horizontal" />
+		<View 
+	          android:layout_width="1px"
+	          android:layout_height="match_parent"
+	          android:layout_marginTop="8dp"
+	          android:layout_marginBottom="8dp"
+	          android:background="@color/bg_Gray"
+	          />
+		
+		
+		
+		 <RadioButton
+	          android:id="@+id/wodegouliang_detail_radiobtn_sc"
+	          android:layout_width="0dp"
+	          android:layout_height="wrap_content"
+
+	         android:text="送出"
+	         android:textColor="@color/fenlei_menu_textcolor"
+	          android:layout_weight="1"
+	          android:button="@null"
+	      	  android:padding="10dp"
+	      	  android:gravity="center_horizontal" />
+ 
+	        	 
+		<View 
+	          android:layout_width="1px"
+	          android:layout_height="match_parent"
+	          android:layout_marginTop="8dp"
+	          android:layout_marginBottom="8dp"
+	          android:background="@color/bg_Gray"
+	          />
+	      <RadioButton
+	          android:id="@+id/wodegouliang_detail_radiobtn_cz"
+	          android:layout_width="0dp"
+	          android:layout_height="wrap_content"
+	          android:text="充值"
+	          android:textColor="@color/fenlei_menu_textcolor"
+	          android:layout_weight="1"
+	          android:button="@null"
+	      	  android:padding="10dp"
+	      	  android:gravity="center_horizontal" />
+	    </com.gyh.digou.fenlei.NestRadioGroup> 
+	    
+ 
+ 
+ <ListView 
+     
+     
+     android:id="@+id/wodegouliang_detail_list"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:listSelector="@drawable/listselector"
+     
+     ></ListView>
+</LinearLayout>

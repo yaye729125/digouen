@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f4f6"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#7c7c7c" >
+
+            <RadioButton
+                android:id="@+id/guanli_fanhui"
+                android:drawableLeft="@drawable/fanhui"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+               android:layout_centerVertical="true"    
+               android:button="@null"
+                android:paddingLeft="5dp"
+              	android:gravity="left|center_vertical"
+              	android:background="@drawable/wode_title_btn_selector"
+                android:textColor="#fbfdfc"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+	            android:layout_marginBottom="10dp"
+	            android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="爽点管理"
+                android:textColor="#fbfdfc"
+                android:textSize="22sp" />
+
+            
+        </RelativeLayout>
+
+    <TableLayout
+        android:id="@+id/shuangdianguanli"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="1.0dip"
+        android:shrinkColumns="0"
+        android:stretchColumns="0" >
+
+        <TableRow
+            android:id="@+id/shuangdianshengyu_tab"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="2.0dip"
+            android:layout_marginRight="2.0dip"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/title_layout_selector"
+            android:clickable="true"
+            android:paddingBottom="16.0dip"
+            android:paddingTop="16.0dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:drawableLeft="@drawable/wodeguanzhu"
+                android:drawablePadding="10.0dip"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:paddingLeft="15.0dip"
+                android:text="剩余爽点"
+                android:textColor="#949494"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/shuangdianshengyu_text"
+                android:layout_width="90dp"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:ellipsize="end"
+                android:text="453" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/shuangdiantuisong_tab"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="2.0dip"
+            android:layout_marginRight="2.0dip"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/title_layout_selector"
+            android:clickable="true"
+            android:paddingBottom="16.0dip"
+            android:paddingTop="16.0dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:drawableLeft="@drawable/wodexiaoxi"
+                android:drawablePadding="10.0dip"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:paddingLeft="15.0dip"
+                android:text="爽点推送数量/客人"
+                android:textColor="#949494"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/shuangdiantuisong_text"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:text="2345" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right"
+                android:gravity="center_vertical"
+                android:paddingRight="20.0dip"
+                android:src="@drawable/ic_arrow" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/shuangdianchongzhi_tab"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="2.0dip"
+            android:layout_marginRight="2.0dip"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/title_layout_selector"
+            android:clickable="true"
+            android:paddingBottom="16.0dip"
+            android:paddingTop="16.0dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:drawableLeft="@drawable/shenqingchengweishangjia"
+                android:drawablePadding="10.0dip"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:paddingLeft="15.0dip"
+                android:text="爽点充值"
+                android:textColor="#ee3d1c"
+              
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right"
+                android:gravity="center_vertical"
+                android:paddingRight="20.0dip"
+                android:src="@drawable/ic_arrow" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="10dp"
+        android:text="爽点推送信息编辑"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/tuisong_editText1"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:ems="10"
+        android:paddingLeft="10dp"
+       android:background="@drawable/shape"
+        android:gravity="start"
+        android:hint="请输入50字以内的文字" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/baocun_button1"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textColor="#ffffff"
+        android:background="@drawable/sel"
+        android:layout_marginTop="5dp"
+        android:text="保存" />
+
+</LinearLayout>

@@ -1,0 +1,166 @@
+package com.gyh.digou.wode;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import net.tsz.afinal.FinalHttp;
+import net.tsz.afinal.http.AjaxCallBack;
+import net.tsz.afinal.http.AjaxParams;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.gyh.digou.R;
+import com.gyh.digou.app.MyApp;
+import com.gyh.digou.util.Tools;
+import com.gyh.digou.wode.maijia.MessageAdapter;
+import com.gyh.digou.wode.maijia.Wodexiaoxi;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.Toast;
+
+public class ZhuCe extends Activity{
+	EditText editText1,editText2,editText3,editText4;
+	
+	String	phon;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.zhuce);
+		 editText1=(EditText) findViewById(R.id.my_phone);
+		 editText2=(EditText) findViewById(R.id.my_password);
+		 editText3=(EditText) findViewById(R.id.my_username);
+		 editText4=(EditText) findViewById(R.id.my_yanzhenma);
+		 Button button1=(Button) findViewById(R.id.my_button);
+		 RadioButton button2=(RadioButton) findViewById(R.id.zhuce_radioButton);
+		 
+		
+			
+		
+		
+				button1.setOnClickListener(new OnClickListener() {	
+					@Override
+					public void onClick(View arg0) {				
+					
+					
+					String ph=	editText1.getText().toString();
+					
+					
+					 AjaxParams params = new AjaxParams();
+					 params.put("mobile", ph);
+						FinalHttp fh = new FinalHttp();
+						fh.post(Tools.getBaseUrl() +"?app=member&act=api_register_send_msg",
+								params, new AjaxCallBack<String>() {
+
+									public void onFailure(Throwable t, int errorNo,
+											String strMsg) {
+										Toast.makeText(ZhuCe.this, strMsg,
+												Toast.LENGTH_SHORT).show();
+									}
+
+									@Override
+									public void onSuccess(String t) {
+										 //System.out.println("---0-------"+t+"-----0-----0------------");
+
+								               try {
+								            	   JSONObject jsonObject=new JSONObject(t);
+													String suc= jsonObject.getString("ErrNum");
+													Toast.makeText(ZhuCe.this,jsonObject.getString("ErrMsg"),Toast.LENGTH_SHORT).show();
+								            	   if(suc.equals("0")){
+								            		   
+								            		   ZhuCe.this.finish();
+								            		   
+								            		   
+								            	   }
+								            	   
+								            	   
+											} catch (Exception e) {
+												e.printStackTrace();
+											}
+										
+									}
+									
+						
+					
+								});
+				
+					}
+					
+				});
+		 
+		 
+		 
+		
+		button2.setOnClickListener(new OnClickListener() {
+			
+			public void onClick(View arg0) {
+				
+			     String pass=	editText2.getText().toString();
+			     String user=	editText3.getText().toString();
+			     String codes=	editText4.getText().toString();
+				
+			     String ph=	editText1.getText().toString();
+			    
+				 AjaxParams paramss = new AjaxParams();
+				 paramss.put("user_name", user);
+				 paramss.put("password", pass);
+				 paramss.put("mobile", ph);
+				  paramss.put("code", codes);
+				
+					//params.put("pattern", "systempm");
+					FinalHttp fh = new FinalHttp();
+					fh.post(Tools.getBaseUrl() + "?app=member&act=api_register",
+							paramss, new AjaxCallBack<String>() {
+
+								public void onFailure(Throwable t, int errorNo,
+										String strMsg) {
+									Toast.makeText(ZhuCe.this, strMsg,
+											Toast.LENGTH_SHORT).show();
+								}
+
+								@Override
+								public void onSuccess(String t) {
+									 System.out.println("---0-------"+t+"-----0-----0------------");
+
+               try {
+            	   JSONObject jsonObject=new JSONObject(t);
+					String suc= jsonObject.getString("ErrNum");
+            	   if(suc.equals("0")){
+            		   Toast.makeText(ZhuCe.this, "注册成功", 0).show();
+            	   }if(suc.equals("1")){
+            		   Toast.makeText(ZhuCe.this, "注册失败", 0).show();
+            	   }
+            	   
+            	   
+			} catch (Exception e) {
+				
+			}
+									
+									 
+									 
+									 
+									 
+								}
+
+							});
+					
+			
+			}
+		});
+		
+		
+		
+		
+	}
+
+}

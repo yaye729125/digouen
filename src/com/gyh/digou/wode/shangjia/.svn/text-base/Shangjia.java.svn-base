@@ -1,0 +1,218 @@
+package com.gyh.digou.wode.shangjia;
+
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import net.tsz.afinal.FinalBitmap;
+import net.tsz.afinal.FinalHttp;
+import net.tsz.afinal.http.AjaxCallBack;
+import net.tsz.afinal.http.AjaxParams;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.gyh.digou.R;
+import com.gyh.digou.app.MyApp;
+import com.gyh.digou.util.Tools;
+import com.gyh.digou.wode.maijia.MessageAdapter;
+import com.gyh.digou.wode.maijia.ShuangDianguanli;
+import com.gyh.digou.wode.maijia.Wodexiaoxi;
+
+public class Shangjia extends Activity{
+	Button caigou_button;
+	Button dingdan_button;
+	Button zhuanghuguanli_button;
+	Button digoushuangdian;
+	Button shangjia_shangpinguanli;
+	Button shangjizijinguanli;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+	setContentView(R.layout.shangjiamoshi);
+	
+	
+	final TextView textView1=(TextView) findViewById(R.id.shangjia_name);
+	final TextView textView2=(TextView) findViewById(R.id.shangjia_huiyuan);
+	final TextView textView3=(TextView) findViewById(R.id.shangjia_shuangdian);
+	TextView textView4=(TextView) findViewById(R.id.shangjia_zijin);
+	final ImageView view=(ImageView) findViewById(R.id.shangjia_touxiang);
+	shangjizijinguanli=(Button) findViewById(R.id.shangjizijinguanli);
+	
+	
+	AjaxParams params = new AjaxParams();
+	MyApp myApp = (MyApp) this.getApplication();
+	String token = myApp.getInfo().getData().getToken();
+	MyApp app = (MyApp) Shangjia.this.getApplication();
+	params.put("token", token);
+	//params.put("pattern", "newpm");
+
+	FinalHttp fh = new FinalHttp();
+	fh.post(Tools.getBaseUrl() + "?app=member&act=api_user_info",
+			params, new AjaxCallBack<String>() {
+
+				public void onFailure(Throwable t, int errorNo,
+						String strMsg) {
+					Toast.makeText(Shangjia.this, strMsg,
+							Toast.LENGTH_SHORT).show();
+				}
+
+				@Override
+				public void onSuccess(String t) {
+					 System.out.println("---80-------"+t+"-----80-----80------------");
+				
+				//	Toast.makeText(Shangjia.this, t, 0).show();
+					 
+					try {
+						 JSONObject jsonObject=new JSONObject(t);
+						 
+						JSONObject jsonObject2= jsonObject.getJSONObject("data");
+					String name=	jsonObject2.getString("user_name");
+					String huiyuan=	jsonObject2.getString("ugrade");
+					String shuangdian=	jsonObject2.getString("point");
+					String image=	jsonObject2.getString("portrait");
+						 
+					textView1.setText(name);
+					textView2.setText("会员等级:"+huiyuan);
+					textView3.setText("爽点:"+shuangdian);
+					
+					  FinalBitmap bitmap=FinalBitmap.create(Shangjia.this);
+						
+					  bitmap.display(view, image); 		
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+						 
+					} catch (Exception e) {
+						// TODO: handle exception
+					}
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+//				textView1.setText(name);
+//				textView2.setText("会员等级:"+huiyuan);
+//				textView3.setText("爽点:"+shuandian);
+//						
+//				Toast.makeText(Shangjia.this, name+huiyuan+shuandian, 0).show();	
+//						
+//					
+					System.out.println("-=-========"+t);
+					
+					
+					
+					
+					
+					
+					
+						
+					
+					 
+
+					}
+
+				
+
+			});
+	
+	
+	
+	caigou_button=(Button) findViewById(R.id.shangjia_caigou);
+	caigou_button.setOnClickListener(new OnClickListener() {
+		@Override
+		public void onClick(View arg0) {
+			// TODO Auto-generated method stub
+			finish();
+			
+		}
+	});
+	
+	dingdan_button=(RadioButton) findViewById(R.id.dingdanguanli_button);
+	dingdan_button.setOnClickListener(new OnClickListener() {
+		
+		@Override
+		public void onClick(View arg0) {
+		   Intent intent=new Intent(Shangjia.this,Dingdangunali.class);
+		   startActivity(intent);
+			
+		}
+	});
+	zhuanghuguanli_button=(RadioButton) findViewById(R.id.zhanghuguanli_button);
+	zhuanghuguanli_button.setOnClickListener(new OnClickListener() {
+		
+		@Override
+		public void onClick(View arg0) {
+			  Intent intent=new Intent(Shangjia.this, Zhanhuguanli.class);
+			  startActivity(intent);
+			  }
+	});
+	digoushuangdian=(RadioButton) findViewById(R.id.digoushuangdian);
+	digoushuangdian.setOnClickListener(new OnClickListener() {
+		
+		@Override
+		public void onClick(View arg0) {
+			Intent intent=new Intent(Shangjia.this, ShuangDianguanli.class);
+			startActivity(intent);
+		}
+	});
+	
+	shangjia_shangpinguanli=(RadioButton) findViewById(R.id.shangjia_shangpinguanli);
+	shangjia_shangpinguanli.setOnClickListener(new OnClickListener() {
+		
+		@Override
+		public void onClick(View arg0) {
+			Intent intent=new Intent(Shangjia.this, Shangpinguanli.class);
+			startActivity(intent);
+		}
+	});
+	
+	shangjizijinguanli=(RadioButton) findViewById(R.id.shangjizijinguanli);
+	shangjizijinguanli.setOnClickListener(new OnClickListener() {
+		
+		@Override
+		public void onClick(View arg0) {
+			Intent intent=new Intent(Shangjia.this, Zijinxiangqing.class);
+			startActivity(intent);
+		}
+	});
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	}
+	
+}

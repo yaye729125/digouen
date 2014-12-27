@@ -1,0 +1,850 @@
+package com.gyh.digou.wode.shangjia;
+
+
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import net.tsz.afinal.FinalHttp;
+import net.tsz.afinal.http.AjaxCallBack;
+import net.tsz.afinal.http.AjaxParams;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.gyh.digou.R;
+import com.gyh.digou.app.MyApp;
+import com.gyh.digou.util.Tools;
+import com.gyh.digou.wode.DingDanGuanLiActivity;
+import com.gyh.digou.wode.DingdanXiangqing;
+import com.gyh.digou.wode.YiyueqianDingDaniAdapter;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.CompoundButton;
+import android.widget.ListView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
+import android.widget.RadioGroup.OnCheckedChangeListener;
+import android.widget.TextView;
+
+
+public class Dingdangunali extends Activity{
+	
+<<<<<<< .mine
+	 ListView listView;
+	 
+	 ArrayList<JSONObject> 	 	 warrlist2_btnOne;
+	 ArrayList<JSONObject> 	 	 warrlist2_btnTwo;
+	 ArrayList<JSONObject> 	 	 warrlist2_btnThr;
+	 ArrayList<JSONObject> 	 	 warrlist2_btnFou;
+	 ArrayList<JSONObject> 	 	 warrlist2_btnFiv;
+	 
+	/*Handler handler=new Handler(){
+=======
+	 ListView listView1,listView2,listView3,listView4,listView5;
+	 String boo;
+	 ArrayList<JSONObject>  warrlist1;
+	 ArrayList<JSONObject>  warrlist2;
+	 ArrayList<JSONObject>  warrlist3;
+	 ArrayList<JSONObject>  warrlist4;
+	 ArrayList<JSONObject>  warrlist5;
+		 
+>>>>>>> .r87
+
+<<<<<<< .mine
+		@Override
+		public void handleMessage(Message msg) {
+			// TODO Auto-generated method stub
+			super.handleMessage(msg);
+			 
+			 ArrayList<JSONObject> 	 name= (ArrayList<JSONObject>) msg.obj;
+			YiyueqianDingDaniAdapter adapter=new YiyueqianDingDaniAdapter(Dingdangunali.this, name);
+			listView.setAdapter(adapter);
+		
+			ArrayList<JSONObject>	name1=    (ArrayList<JSONObject>) msg.obj;
+			YiyueqianDingDaniAdapter adapter1=new YiyueqianDingDaniAdapter(Dingdangunali.this, name1);
+			listView.setAdapter(adapter1);
+			
+			
+			
+//		textView.setText(o2);
+//		String o3=	(String) msg.obj;
+//		textView.setText(o3);
+//		String o4=	(String) msg.obj;
+//		textView.setText(o4);
+//		String o5=	(String) msg.obj;
+//		textView.setText(o5);
+			
+			
+			
+		}
+		
+	};*/
+	
+	
+	TextView textView;
+=======
+>>>>>>> .r87
+	 YiyueqianDingDaniAdapter    adapter;
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.dingdan);
+
+		listView1=(ListView) findViewById(R.id.list_dingdan_01);
+		listView2=(ListView) findViewById(R.id.list_dingdan_02);
+		listView3=(ListView) findViewById(R.id.list_dingdan_03);
+		listView4=(ListView) findViewById(R.id.list_dingdan_04);
+		listView5=(ListView) findViewById(R.id.list_dingdan_05);
+		 
+		 
+		 
+<<<<<<< .mine
+		 adapter=new YiyueqianDingDaniAdapter(this);
+=======
+		 
+		 AjaxParams params1 = new AjaxParams();
+			MyApp myApp = (MyApp)Dingdangunali.this.getApplication();
+			String token = myApp.getInfo().getData().getToken();
+
+			params1.put("token", token);
+			params1.put("type", "all");
+
+			
+			FinalHttp fh1 = new FinalHttp();
+			fh1.post(Tools.getBaseUrl() + "?app=seller_order&act=api_orders",
+					params1, new AjaxCallBack<String>() {
+
+						public void onFailure(Throwable t, int errorNo,
+								String strMsg) {
+							Toast.makeText(Dingdangunali.this, strMsg,
+									Toast.LENGTH_SHORT).show();
+						}
+
+						@Override
+						public void onSuccess(String t) {
+							 System.out.println("0---qwwwww-------"+t+"--");
+							 
+							
+							 
+							 
+							 try {
+
+									JSONObject jsonObject = new JSONObject(t);
+									String ErrNum = jsonObject.getString("ErrNum");
+									String ErrMsg = jsonObject.getString("ErrMsg");
+									JSONObject datajson = jsonObject
+											.getJSONObject("data");
+									// String total= datajson.getString("total");
+
+									JSONObject listJson = datajson
+											.getJSONObject("list");
+								 	 warrlist1 = new ArrayList<JSONObject>();
+									
+									Iterator<String> it = listJson.keys();
+									while (it.hasNext()) {
+										String key = it.next();
+										JSONObject object = listJson.getJSONObject(key);
+										warrlist1.add(object);
+
+										
+										
+										
+									
+									}
+								
+									System.out.println("-33-11"+warrlist1);
+				 
+									YiyueqianDingDaniAdapter adapter=new YiyueqianDingDaniAdapter(Dingdangunali.this, warrlist1);
+								           listView1.setAdapter(adapter);
+									
+							
+
+								} catch (Exception e) {
+									// TODO: handle exception
+
+								}
+
+							}
+
+						});	
+>>>>>>> .r87
+		 
+<<<<<<< .mine
+		 listView.setAdapter(adapter);
+		
+		 getBtnOneData();
+		
+				 button1.setOnClickListener(new OnClickListener() {
+						
+						@Override
+						public void onClick(View arg0) {
+							 getBtnOneData();
+							
+							
+							/*Message msg=new Message();
+							
+							msg.obj=warrlist2;
+							
+							handler.sendMessage(msg);*/
+							
+							
+							 
+							 		
+							
+							
+							
+							
+						}
+					})	;
+					 
+			
+=======
+>>>>>>> .r87
+		 
+		 
+		 
+		 
+<<<<<<< .mine
+<<<<<<< .mine
+		 button2.setOnClickListener(new OnClickListener() {
+			 
+			 @Override
+			 public void onClick(View arg0) {
+				 getBtnTwoData();
+				/* AjaxParams paramsq = new AjaxParams();
+					MyApp myApp = (MyApp)Dingdangunali.this.getApplication();
+					String token = myApp.getInfo().getData().getToken();
+=======
+=======
+			
+			
+			
+			
+>>>>>>> .r92
+		
+			
+	
+		
+				 AjaxParams params2 = new AjaxParams();
+			
+					params2.put("token", token);
+					params2.put("type", "pending");
+>>>>>>> .r87
+
+					
+					FinalHttp fh2 = new FinalHttp();
+					fh2.post(Tools.getBaseUrl() + "?app=seller_order&act=api_orders",
+							params2, new AjaxCallBack<String>() {
+
+								public void onFailure(Throwable t, int errorNo,
+										String strMsg) {
+									Toast.makeText(Dingdangunali.this, strMsg,
+											Toast.LENGTH_SHORT).show();
+								}
+
+								@Override
+								public void onSuccess(String t) {
+									 System.out.println("0---qwwwww-------"+t+"--");
+									 
+									
+									 
+									 
+									 try {
+
+											JSONObject jsonObject = new JSONObject(t);
+											String ErrNum = jsonObject.getString("ErrNum");
+											String ErrMsg = jsonObject.getString("ErrMsg");
+											JSONObject datajson = jsonObject
+													.getJSONObject("data");
+											// String total= datajson.getString("total");
+
+											JSONObject listJson = datajson
+													.getJSONObject("list");
+											 warrlist2 = new ArrayList<JSONObject>();
+											
+											Iterator<String> it = listJson.keys();
+											while (it.hasNext()) {
+												String key = it.next();
+												JSONObject object = listJson.getJSONObject(key);
+												warrlist2.add(object);
+
+											
+											}
+
+											System.out.println("-33-11"+warrlist2);
+										
+											YiyueqianDingDaniAdapter adapter=new YiyueqianDingDaniAdapter(Dingdangunali.this, warrlist2);
+									           listView2.setAdapter(adapter);						
+										
+
+										} catch (Exception e) {
+											// TODO: handle exception
+
+										}
+
+									}
+
+								});	
+		
+	
+				 AjaxParams params3 = new AjaxParams();
+
+					params3.put("token", token);
+					params3.put("type", "accepted");
+
+					
+					FinalHttp fh3 = new FinalHttp();
+					fh3.post(Tools.getBaseUrl() + "?app=seller_order&act=api_orders",
+							params3, new AjaxCallBack<String>() {
+
+								public void onFailure(Throwable t, int errorNo,
+										String strMsg) {
+									Toast.makeText(Dingdangunali.this, strMsg,
+											Toast.LENGTH_SHORT).show();
+								}
+
+								@Override
+								public void onSuccess(String t) {
+									 System.out.println("0---qwwwww-------"+t+"--");
+									 
+									
+									 
+									 
+									 try {
+
+											JSONObject jsonObject = new JSONObject(t);
+											String ErrNum = jsonObject.getString("ErrNum");
+											String ErrMsg = jsonObject.getString("ErrMsg");
+											JSONObject datajson = jsonObject
+													.getJSONObject("data");
+									
+
+											JSONObject listJson = datajson
+													.getJSONObject("list");
+											 warrlist3 = new ArrayList<JSONObject>();
+											
+											Iterator<String> it = listJson.keys();
+											while (it.hasNext()) {
+												String key = it.next();
+												JSONObject object = listJson.getJSONObject(key);
+												warrlist3.add(object);
+
+											
+											
+											}
+
+											System.out.println("-33-11"+warrlist3);
+//						 
+											YiyueqianDingDaniAdapter adapter=new YiyueqianDingDaniAdapter(Dingdangunali.this, warrlist3);
+									           listView3.setAdapter(adapter);						
+															
+											
+										
+
+										} catch (Exception e) {
+											
+
+										}
+
+									}
+
+								});	
+				  
+		
+				 AjaxParams params4 = new AjaxParams();
+
+					params4.put("token", token);
+					params4.put("type", "finished");
+
+					
+					FinalHttp fh4 = new FinalHttp();
+					fh4.post(Tools.getBaseUrl() + "?app=seller_order&act=api_orders",
+							params4, new AjaxCallBack<String>() {
+
+								public void onFailure(Throwable t, int errorNo,
+										String strMsg) {
+									Toast.makeText(Dingdangunali.this, strMsg,
+											Toast.LENGTH_SHORT).show();
+								}
+
+								@Override
+								public void onSuccess(String t) {
+									 System.out.println("333333333333333333-------"+t+"--");
+									 
+									
+									 
+									 
+									 try {
+
+											JSONObject jsonObject = new JSONObject(t);
+											String ErrNum = jsonObject.getString("ErrNum");
+											String ErrMsg = jsonObject.getString("ErrMsg");
+											JSONObject datajson = jsonObject
+													.getJSONObject("data");
+											// String total= datajson.getString("total");
+
+											JSONObject listJson = datajson
+													.getJSONObject("list");
+											 warrlist4 = new ArrayList<JSONObject>();
+											
+											Iterator<String> it = listJson.keys();
+											while (it.hasNext()) {
+												String key = it.next();
+												JSONObject object = listJson.getJSONObject(key);
+												warrlist4.add(object);
+
+											
+											
+											}
+
+											System.out.println("-33-11"+warrlist4);
+//						 
+									
+											YiyueqianDingDaniAdapter adapter=new YiyueqianDingDaniAdapter(Dingdangunali.this, warrlist4);
+									           listView4.setAdapter(adapter);								
+											
+										
+
+										} catch (Exception e) {
+											
+
+										}
+
+									}
+
+								});	*/
+			
+				 
+				 AjaxParams params5 = new AjaxParams();
+
+					params5.put("token", token);
+					params5.put("type", "canceled");
+
+					
+					FinalHttp fhq = new FinalHttp();
+					fhq.post(Tools.getBaseUrl() + "?app=seller_order&act=api_orders",
+							params5, new AjaxCallBack<String>() {
+
+								public void onFailure(Throwable t, int errorNo,
+										String strMsg) {
+									Toast.makeText(Dingdangunali.this, strMsg,
+											Toast.LENGTH_SHORT).show();
+								}
+
+								@Override
+								public void onSuccess(String t) {
+									 System.out.println("333333333333333333-------"+t+"--");
+									 
+									
+									 
+									 
+									 try {
+
+											JSONObject jsonObject = new JSONObject(t);
+											String ErrNum = jsonObject.getString("ErrNum");
+											String ErrMsg = jsonObject.getString("ErrMsg");
+											JSONObject datajson = jsonObject
+													.getJSONObject("data");
+											// String total= datajson.getString("total");
+
+											JSONObject listJson = datajson
+													.getJSONObject("list");
+											 warrlist5 = new ArrayList<JSONObject>();
+											
+											Iterator<String> it = listJson.keys();
+											while (it.hasNext()) {
+												String key = it.next();
+												JSONObject object = listJson.getJSONObject(key);
+												warrlist5.add(object);
+
+											
+											
+											}
+
+											System.out.println("-33-11"+warrlist5);
+//						 
+										
+											YiyueqianDingDaniAdapter adapter=new YiyueqianDingDaniAdapter(Dingdangunali.this, warrlist5);
+									           listView5.setAdapter(adapter);								
+													
+											
+											
+										
+
+										} catch (Exception e) {
+											
+
+										}
+
+									}
+
+								});	
+				  
+		
+				
+		 listView1.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				
+			try {
+				String id=	warrlist1.get(arg2).getString("order_id");
+				
+				Intent intent=new Intent(Dingdangunali.this, ShangjiaDingdanxianxi.class);
+				intent.putExtra("id", id);
+				startActivity(intent);
+				
+				
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+				
+				
+				
+			}
+		});	
+		 listView2.setOnItemClickListener(new OnItemClickListener() {
+			 
+			 @Override
+			 public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					 long arg3) {
+				 
+				 try {
+					 String id=	warrlist2.get(arg2).getString("order_id");
+					 
+					 Intent intent=new Intent(Dingdangunali.this, ShangjiaDingdanxianxi.class);
+					 intent.putExtra("id", id);
+					 startActivity(intent);
+					 
+					 
+				 } catch (JSONException e) {
+					 // TODO Auto-generated catch block
+					 e.printStackTrace();
+				 }
+				 
+				 
+				 
+			 }
+<<<<<<< .mine
+		 })	;
+		 /*button3.setOnClickListener(new OnClickListener() {
+=======
+		 });	
+		 listView3.setOnItemClickListener(new OnItemClickListener() {
+>>>>>>> .r87
+			 
+			 @Override
+			 public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					 long arg3) {
+				 
+				 try {
+					 String id=	warrlist3.get(arg2).getString("order_id");
+					 
+					 Intent intent=new Intent(Dingdangunali.this, ShangjiaDingdanxianxi.class);
+					 intent.putExtra("id", id);
+					 startActivity(intent);
+					 
+					 
+				 } catch (JSONException e) {
+					 // TODO Auto-generated catch block
+					 e.printStackTrace();
+				 }
+				 
+				 
+				 
+			 }
+		 });	
+		 listView4.setOnItemClickListener(new OnItemClickListener() {
+			 
+			 @Override
+			 public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					 long arg3) {
+				 
+				 try {
+					 String id=	warrlist4.get(arg2).getString("order_id");
+					 
+					 Intent intent=new Intent(Dingdangunali.this, ShangjiaDingdanxianxi.class);
+					 intent.putExtra("id", id);
+					 startActivity(intent);
+					 
+					 
+				 } catch (JSONException e) {
+					 // TODO Auto-generated catch block
+					 e.printStackTrace();
+				 }
+				 
+				 
+				 
+			 }
+		 });	
+		 listView5.setOnItemClickListener(new OnItemClickListener() {
+			 
+			 @Override
+			 public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					 long arg3) {
+				 
+				 try {
+					 String id=	warrlist5.get(arg2).getString("order_id");
+					 
+					 Intent intent=new Intent(Dingdangunali.this, ShangjiaDingdanxianxi.class);
+					 intent.putExtra("id", id);
+					 startActivity(intent);
+					 
+					 
+				 } catch (JSONException e) {
+					 // TODO Auto-generated catch block
+					 e.printStackTrace();
+				 }
+				 
+				 
+				 
+			 }
+<<<<<<< .mine
+		 })	;*/
+				
+				
+				
+				
+				
+				
+				
+=======
+		 });	
+>>>>>>> .r87
+		
+	}
+	
+	public void on1(View v) {
+		listView1.setVisibility(v.VISIBLE);
+		listView2.setVisibility(v.INVISIBLE);
+		listView3.setVisibility(v.INVISIBLE);
+		listView4.setVisibility(v.INVISIBLE);
+		listView5.setVisibility(v.INVISIBLE);
+
+	}
+	public void on2(View v) {
+		listView1.setVisibility(v.INVISIBLE);
+		listView3.setVisibility(v.INVISIBLE);
+		listView4.setVisibility(v.INVISIBLE);
+		listView2.setVisibility(v.VISIBLE);
+		listView5.setVisibility(v.INVISIBLE);
+		
+	}
+	public void on3(View v) {
+		listView1.setVisibility(v.INVISIBLE);
+		listView3.setVisibility(v.VISIBLE);
+		listView4.setVisibility(v.INVISIBLE);
+		listView2.setVisibility(v.INVISIBLE);
+		listView5.setVisibility(v.INVISIBLE);
+		
+	}
+	public void on4(View v) {
+		listView1.setVisibility(v.INVISIBLE);
+		listView3.setVisibility(v.INVISIBLE);
+		listView4.setVisibility(v.VISIBLE);
+		listView2.setVisibility(v.INVISIBLE);
+		listView5.setVisibility(v.INVISIBLE);
+		
+	}
+	public void on5(View v) {
+		listView1.setVisibility(v.INVISIBLE);
+		listView3.setVisibility(v.INVISIBLE);
+		listView5.setVisibility(v.VISIBLE);
+		listView2.setVisibility(v.INVISIBLE);
+		listView4.setVisibility(v.INVISIBLE);
+		
+	}
+<<<<<<< .mine
+	
+	public void getBtnTwoData()
+	{
+		
+		 AjaxParams paramsq = new AjaxParams();
+			MyApp myApp = (MyApp)Dingdangunali.this.getApplication();
+			String token = myApp.getInfo().getData().getToken();
+=======
+	
+	
+>>>>>>> .r87
+
+			paramsq.put("token", token);
+			paramsq.put("type", "pending");
+
+			
+			FinalHttp fhq = new FinalHttp();
+			fhq.post(Tools.getBaseUrl() + "?app=seller_order&act=api_orders",
+					paramsq, new AjaxCallBack<String>() {
+
+						public void onFailure(Throwable t, int errorNo,
+								String strMsg) {
+							Toast.makeText(Dingdangunali.this, strMsg,
+									Toast.LENGTH_SHORT).show();
+						}
+
+						@Override
+						public void onSuccess(String t) {
+							 System.out.println("0---qwwwww-------"+t+"--");
+							 
+							
+							 
+							 
+							 try {
+
+									JSONObject jsonObject = new JSONObject(t);
+									String ErrNum = jsonObject.getString("ErrNum");
+									String ErrMsg = jsonObject.getString("ErrMsg");
+									JSONObject datajson = jsonObject
+											.getJSONObject("data");
+									// String total= datajson.getString("total");
+
+									JSONObject listJson = datajson
+											.getJSONObject("list");
+									 warrlist2_btnTwo = new ArrayList<JSONObject>();
+									
+									Iterator<String> it = listJson.keys();
+									while (it.hasNext()) {
+										String key = it.next();
+										JSONObject object = listJson.getJSONObject(key);
+										warrlist2_btnTwo.add(object);
+//									JSONObject jsonObject2=object.getJSONObject("order_goods");	
+////									warrlists = new ArrayList<JSONObject>();
+//									Iterator<String> its = jsonObject2.keys();
+//									while (it.hasNext()) {
+//										String keyss = it.next();
+//										JSONObject objects = jsonObject2.getJSONObject(keyss);
+//										warrlist.add(objects);
+//									
+								//	}
+									
+									
+									}
+//									String name=listJson.getString("goods_name");
+									System.out.println("-33-11"+warrlist2_btnTwo);
+//				 					ada
+									/* Message msg3=new Message();
+										msg3.obj=warrlist3;
+										handler.sendMessage(msg3);*/
+							
+									adapter.setData(warrlist2_btnTwo);
+									
+								
+
+								} catch (Exception e) {
+									// TODO: handle exception
+
+								}
+
+							}
+
+						});	
+		
+		
+		
+		
+		
+	}
+	
+	
+	public void getBtnOneData()
+	{
+		
+		
+		 AjaxParams paramsq = new AjaxParams();
+			MyApp myApp = (MyApp)Dingdangunali.this.getApplication();
+			String token = myApp.getInfo().getData().getToken();
+
+			paramsq.put("token", token);
+			paramsq.put("type", "all");
+
+			
+			FinalHttp fhq = new FinalHttp();
+			fhq.post(Tools.getBaseUrl() + "?app=seller_order&act=api_orders",
+					paramsq, new AjaxCallBack<String>() {
+
+						public void onFailure(Throwable t, int errorNo,
+								String strMsg) {
+							Toast.makeText(Dingdangunali.this, strMsg,
+									Toast.LENGTH_SHORT).show();
+						}
+
+						@Override
+						public void onSuccess(String t) {
+							 System.out.println("0---qwwwww-------"+t+"--");
+							 
+							
+							 
+							 
+							 try {
+
+									JSONObject jsonObject = new JSONObject(t);
+									String ErrNum = jsonObject.getString("ErrNum");
+									String ErrMsg = jsonObject.getString("ErrMsg");
+									JSONObject datajson = jsonObject
+											.getJSONObject("data");
+									// String total= datajson.getString("total");
+
+									JSONObject listJson = datajson
+											.getJSONObject("list");
+								 	 warrlist2_btnOne= new ArrayList<JSONObject>();
+									
+									Iterator<String> it = listJson.keys();
+									while (it.hasNext()) {
+										String key = it.next();
+										JSONObject object = listJson.getJSONObject(key);
+										warrlist2_btnOne.add(object);
+//									JSONObject jsonObject2=object.getJSONObject("order_goods");	
+////									warrlists = new ArrayList<JSONObject>();
+//									Iterator<String> its = jsonObject2.keys();
+//									while (it.hasNext()) {
+//										String keyss = it.next();
+//										JSONObject objects = jsonObject2.getJSONObject(keyss);
+//										warrlist.add(objects);
+//									
+								//	}
+									
+									
+									}
+//									String name=listJson.getString("goods_name");
+									System.out.println("-33-11"+warrlist2_btnOne);
+//				 
+									
+							
+									adapter.setData(warrlist2_btnOne);
+									
+									
+								
+							//	DingdanXiangqingAdapter adapter2 =new DingdanXiangqingAdapter(DingDanGuanLiActivity.this, warrlists);
+									
+								//listView.setAdapter(adapter1);
+								//	listView1.setAdapter(adapter2);
+
+								} catch (Exception e) {
+									// TODO: handle exception
+
+								}
+
+							}
+
+						});	
+		
+		
+		
+		
+	}
+
+}

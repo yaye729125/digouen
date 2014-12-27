@@ -1,0 +1,99 @@
+package com.gyh.digou.fenlei;
+
+import java.util.List;
+
+import net.tsz.afinal.FinalBitmap;
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.gyh.digou.R;
+import com.gyh.digou.bean.GoodsCategory;
+import com.gyh.digou.bean.GoodsCategoryInfo;
+
+
+public class RightListAdapter extends BaseAdapter {
+	List<String> lst1;
+	Context context;
+	LayoutInflater layoutInflater;
+	String[][] cities;
+	List<GoodsCategory> list;
+	public int poition;
+	 GoodsCategoryInfo info;
+	FinalBitmap imageLoader;
+	
+	
+	
+	public RightListAdapter(Context mContext)
+	{
+		this.context = mContext;
+		layoutInflater = (LayoutInflater) context
+				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		imageLoader=FinalBitmap.create(mContext);
+		imageLoader.configLoadingImage(R.drawable.ic_launcher);
+	}
+	public void setData(GoodsCategoryInfo info, int position) {
+		
+		//this.cities = cities;
+		if(info!=null)
+		{
+			this.info=info;
+			
+			list = info.getData().get(position).getChildren();
+			this.poition = position;
+			notifyDataSetChanged();
+		}
+	
+		
+	}
+
+	
+	public List<GoodsCategory> getAdapterData()
+	{
+		return list;
+	}
+	@Override
+	public int getCount() {
+		return list==null?0:list.size();
+	}
+
+	@Override
+	public Object getItem(int position) {
+		return list.get(position);
+	}
+
+	@Override
+	public long getItemId(int position) {
+		return position;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+
+		ViewHolder viewHolder = null;
+		if (convertView == null) {
+			convertView = layoutInflater.inflate(R.layout.fenlei_fragment_listitem, null);
+			viewHolder = new ViewHolder();
+			viewHolder.textView = (TextView) convertView
+					.findViewById(R.id.fenlei_fragment_parent_listitem_tv);
+			viewHolder.imv=(ImageView) convertView.findViewById(R.id.fenlei_fragment_parent_listitem_imv);
+			convertView.setTag(viewHolder);
+		} else {
+			viewHolder = (ViewHolder) convertView.getTag();
+		}
+		GoodsCategory category=list.get(position);
+		viewHolder.textView.setText(category.getCate_name());
+		imageLoader.display(viewHolder.imv,category.getImage());
+		return convertView;
+	}
+
+	public static class ViewHolder {
+		public TextView textView;
+		public ImageView imv;
+	}
+
+}

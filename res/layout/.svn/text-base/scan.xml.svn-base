@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#ffffff">
+    <LinearLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+      	android:layout_above="@+id/main_bottom"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+    
+        
+    <RelativeLayout
+      	android:id="@+id/main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        
+       	android:background="@drawable/radio_group_selector"
+        android:orientation="vertical" >
+
+	    <RadioGroup
+	        android:id="@+id/radioGroup"
+	        android:layout_width="match_parent"
+	        android:layout_height="50dp"
+	        android:layout_alignParentBottom="true"
+	       	android:layout_marginLeft="10dp"
+        	android:layout_marginRight="10dp"
+	        android:fadingEdge="none"
+	        android:gravity="center_horizontal"
+	        android:orientation="horizontal">
+	
+	        <RadioButton
+	            android:id="@+id/first"
+	            style="@style/main_bottom_radoibtn"
+	            android:drawableTop="@drawable/main_shouye_radiobtn_selector"
+	           
+	            android:text="首页"
+              	android:checked="true"
+                />
+	
+	        <RadioButton
+	            android:id="@+id/second"
+	          style="@style/main_bottom_radoibtn"
+	            android:drawableTop="@drawable/main_fenlei_radiobtn_selector"
+	           
+	            android:text="分类" 
+                
+                />
+	
+	        <RadioButton
+	            android:id="@+id/third"
+	             style="@style/main_bottom_radoibtn"
+	            android:drawableTop="@drawable/main_faxian_radiobtn_selector"
+	           
+	            android:text="发现"
+               
+                 />
+	
+	        <RadioButton
+	            android:id="@+id/fourth"
+	              style="@style/main_bottom_radoibtn"
+	            android:drawableTop="@drawable/main_gouwuche_radiobtn_selector"
+	            
+	            android:text="购物车"
+              
+                 />
+	
+	        <RadioButton
+	            android:id="@+id/fifth"
+	            style="@style/main_bottom_radoibtn"
+	            android:drawableTop="@drawable/main_wode_radiobtn_selector"
+	           
+	            android:text="我的"
+               
+                />
+	    </RadioGroup>
+    </RelativeLayout>
+
+</RelativeLayout>
