@@ -100,7 +100,7 @@ public class WodeGouLiangActivity extends Activity{
 			@Override
 			public void run() {
 				List<NameValuePair> params=new ArrayList<NameValuePair>();
-				params.add(new BasicNameValuePair("token",Data.getInfo().getData().getToken()));
+				params.add(new BasicNameValuePair("token",Data.info.getData().getToken()));
 				final String result=NetworkUtil.post(Tools.getBaseUrl()+"?app=my_point&act=api_point", params);
 				System.out.println(result+"------------100"); 
 				

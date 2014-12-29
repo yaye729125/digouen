@@ -140,7 +140,7 @@ public class MakeOrderActivity extends Activity {
 		  
 		  showDialog();
 		  final AjaxParams params=new AjaxParams();
-		  params.put("token",Data.getInfo().getData().getToken());
+		  params.put("token",Data.info.getData().getToken());
 		  String store_id="";
 		  try {
 		  if(data.size()>1)

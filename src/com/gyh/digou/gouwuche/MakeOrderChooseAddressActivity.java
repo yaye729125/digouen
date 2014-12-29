@@ -80,7 +80,7 @@ public class MakeOrderChooseAddressActivity extends Activity {
 		
 		AjaxParams params = new AjaxParams();
 		
-		params.put("token", Data.getInfo().getData().getToken());
+		params.put("token",Data.info.getData().getToken());
 
 		FinalHttp fh = new FinalHttp();
 		fh.post(Tools.getBaseUrl() + "?app=my_address&act=api_address", params,

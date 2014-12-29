@@ -25,7 +25,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class EditShangpinAddFormatActivity extends Activity {
+public class ShangpinEditAddFormatActivity extends Activity {
 
 	
 	
@@ -60,10 +60,10 @@ public class EditShangpinAddFormatActivity extends Activity {
 					Intent data=new Intent();
 					data.putExtra("format",getSpecsBySpecs());
 					setResult(0x19, data);
-					EditShangpinAddFormatActivity.this.finish();
+					ShangpinEditAddFormatActivity.this.finish();
 				}else
 				{
-					Toast.makeText(EditShangpinAddFormatActivity.this,"您必须填写所有必填项目", Toast.LENGTH_SHORT).show();
+					Toast.makeText(ShangpinEditAddFormatActivity.this,"您必须填写所有必填项目", Toast.LENGTH_SHORT).show();
 				}
 				
 			}
@@ -82,7 +82,7 @@ public class EditShangpinAddFormatActivity extends Activity {
 					adapter.notifyDataSetChanged();
 				}else
 				{
-					Toast.makeText(EditShangpinAddFormatActivity.this,"您最多添加二十组属性", Toast.LENGTH_SHORT).show();
+					Toast.makeText(ShangpinEditAddFormatActivity.this,"您最多添加二十组属性", Toast.LENGTH_SHORT).show();
 				}
 				//expandList();
 				
@@ -102,7 +102,7 @@ public class EditShangpinAddFormatActivity extends Activity {
 				}else
 				{
 					
-					Toast.makeText(EditShangpinAddFormatActivity.this,"您必须添加至少一组属性", Toast.LENGTH_SHORT).show();
+					Toast.makeText(ShangpinEditAddFormatActivity.this,"您必须添加至少一组属性", Toast.LENGTH_SHORT).show();
 				}
 			}
 		});
@@ -503,13 +503,6 @@ public class EditShangpinAddFormatActivity extends Activity {
 					}
 					class kcWatcher implements TextWatcher {
 
-						
-						/*ChildViewHolder holder;
-						kcWatcher(ChildViewHolder holder)
-						{
-							
-							this.holder=holder;
-						}*/
 						@Override
 						public void afterTextChanged(Editable s) {
 							int position = (Integer) kucun.getTag(); 
@@ -538,14 +531,6 @@ public class EditShangpinAddFormatActivity extends Activity {
 					class lsjWatcher implements TextWatcher {
 
 						
-						
-						
-						/*ChildViewHolder holder;
-						lsjWatcher(ChildViewHolder holder)
-						{
-							
-							this.holder=holder;
-						}*/
 						@Override
 						public void afterTextChanged(Editable s) {
 							int position = (Integer)lingshoujia.getTag(); 

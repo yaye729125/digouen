@@ -116,16 +116,20 @@ public class LoginFragment extends Fragment {
 						LoginInfo info=gson.fromJson(t, LoginInfo.class);
 						
 						
-						
-						/*app.setInfo(info);
-						Data.setInfo(info);*/
-						Data.info=info;
-						MyApp app=((MyApp)getActivity().getApplication());
-						app.saveInfo(info);
-						//Data.saveInfo(mContext, info);
-						//Data.setToken(info.getData().getToken());
-						Toast.makeText(getActivity(),info.getErrMsg()+"  userType="+Data.getUserType()+"  store_id="+info.getData().getStore_id(),Toast.LENGTH_SHORT).show();
-						
+						if(info.ErrNum.equals("0"))
+						{
+							/*app.setInfo(info);
+							Data.setInfo(info);*/
+							Data.info=info;
+							MyApp app=((MyApp)getActivity().getApplication());
+							app.saveInfo(info);
+							//Data.saveInfo(mContext, info);
+							//Data.setToken(info.getData().getToken());
+							Toast.makeText(getActivity(),info.getErrMsg()+"  userType="+Data.getUserType()+"  store_id="+info.getData().getStore_id(),Toast.LENGTH_SHORT).show();
+						}else
+						{
+							Toast.makeText(getActivity(),info.getErrMsg(),Toast.LENGTH_SHORT).show();
+						}
 					}
 					
 				});

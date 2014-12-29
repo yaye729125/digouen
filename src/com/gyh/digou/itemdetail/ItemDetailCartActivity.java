@@ -318,7 +318,7 @@ public class ItemDetailCartActivity extends Activity {
 		
 		
 		AjaxParams params=new AjaxParams();
-		params.put("token",Data.getInfo().getData().getToken());
+		params.put("token",Data.info.getData().getToken());
 		FinalHttp fh=new FinalHttp();
 		fh.post(Data.getshakeUrl(), params,new AjaxCallBack<String>() {
 
@@ -378,7 +378,7 @@ public class ItemDetailCartActivity extends Activity {
 		
 		showDialog();
 		AjaxParams params=new AjaxParams();
-		params.put("token",Data.getInfo().getData().getToken());
+		params.put("token",Data.info.getData().getToken());
 		params.put("spec_id",spec_id);
 		params.put("quantity",num);
 		FinalHttp fh=new FinalHttp();
@@ -398,7 +398,7 @@ public class ItemDetailCartActivity extends Activity {
 		
 		showDialog();
 		AjaxParams params=new AjaxParams();
-		params.put("token",Data.getInfo().getData().getToken());
+		params.put("token",Data.info.getData().getToken());
 		FinalHttp fh=new FinalHttp();
 		fh.post(Data.getCartUrl(), params,new AjaxCallBack<String>() {
 
@@ -487,7 +487,7 @@ public class ItemDetailCartActivity extends Activity {
 		
 		
 		AjaxParams params=new AjaxParams();
-		params.put("token",Data.getInfo().getData().getToken());
+		params.put("token",Data.info.getData().getToken());
 		params.put("rec_id",rec_id);
 		
 		

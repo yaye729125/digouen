@@ -54,7 +54,7 @@ public class Yinghang extends Activity{
 		
 		AjaxParams params = new AjaxParams();
 		
-		params.put("token", Data.getInfo().getData().getToken());
+		params.put("token",Data.info.getData().getToken());
 		
 
 		FinalHttp fh = new FinalHttp();
@@ -129,7 +129,7 @@ public class Yinghang extends Activity{
 				
 				AjaxParams params = new AjaxParams();
 				
-				params.put("token", Data.getInfo().getData().getToken());
+				params.put("token", Data.info.getData().getToken());
 				params.put("bank_name", de1);
 				params.put("bank_code", de2);
 				params.put("user_name", de3);

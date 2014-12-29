@@ -570,7 +570,7 @@ public class ItemDetailActivity extends Activity implements OnClickListener,
 		
 		
 		AjaxParams params=new AjaxParams();
-		params.put("token",Data.getInfo().getData().getToken());
+		params.put("token",Data.info.getData().getToken());
 		params.put("spec_id",cart.getSpec_id());
 		params.put("quantity",cart.getNum());
 		

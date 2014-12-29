@@ -240,7 +240,7 @@ public class MyApp extends Application {
 		
 		if(readInfo())
 		{
-			Data.setInfo(info);
+			Data.info=info;
 		}
 		
 		//startService(new Intent(this,GouliangService.class));
@@ -279,7 +279,7 @@ public class MyApp extends Application {
 						params.put("pageSize","150");
 						params.put("lng",location.getLongitude()+"");
 						params.put("lat",location.getLatitude()+"");
-						params.put("user_id",Data.getInfo().getData().getUser_id());
+						params.put("user_id",Data.info.getData().getUser_id());
 						params.put("distance", "50000");
 						params.put("point", "10");
 						

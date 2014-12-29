@@ -98,7 +98,7 @@ public class WodeGouliangDetailActivity extends Activity {
 	{
 		
 		AjaxParams params=new AjaxParams();
-		params.put("token",Data.getInfo().getData().getToken());
+		params.put("token",Data.info.getData().getToken());
 		
 		params.put("page","1");
 		params.put("pageSize","20");

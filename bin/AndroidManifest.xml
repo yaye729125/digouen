@@ -211,7 +211,7 @@
         <activity android:name="com.gyh.digou.wode.shangjia.WodeGouLiangEnActivity"></activity>
         <activity android:name="com.gyh.digou.wode.shangjia.TianJiaShangpinAddFormatActivity"></activity>
         
-        <activity android:name="com.gyh.digou.wode.shangjia.EditShangpinAddFormatActivity"></activity>
+        <activity android:name="com.gyh.digou.wode.shangjia.ShangpinEditAddFormatActivity"></activity>
         
         
         

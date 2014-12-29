@@ -107,7 +107,7 @@ public class Shuangdianchongzhi extends Activity {
 				
 				AjaxParams params = new AjaxParams();
 				
-				params.put("token", Data.getInfo().getData().getToken());
+				params.put("token",Data.info.getData().getToken());
 		
 			
 				 params.put("num",chongzhi);

@@ -40,7 +40,7 @@ public class Wodeshoucang extends Activity {
 //			MyApp myApp = (MyApp) this.getApplication();
 //			String token = myApp.getInfo().getData().getToken();
 //			MyApp app = (MyApp) Wodeshoucang.this.getApplication();
-			paramys.put("token",Data.getInfo().getData().getToken());
+			paramys.put("token",Data.info.getData().getToken());
 			paramys.put("type", "store");
 
 			FinalHttp fhy = new FinalHttp();
@@ -109,7 +109,7 @@ public class Wodeshoucang extends Activity {
 		 
 		 AjaxParams params = new AjaxParams();
 			
-			params.put("token",Data.getInfo().getData().getToken());
+			params.put("token",Data.info.getData().getToken());
 			params.put("type", "goods");
 
 			FinalHttp fh = new FinalHttp();

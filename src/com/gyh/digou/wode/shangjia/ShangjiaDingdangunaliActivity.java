@@ -8,6 +8,8 @@ import java.util.Iterator;
 import net.tsz.afinal.FinalHttp;
 import net.tsz.afinal.http.AjaxCallBack;
 import net.tsz.afinal.http.AjaxParams;
+
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -42,7 +44,7 @@ public class ShangjiaDingdangunaliActivity extends Activity{
 		/*MyApp myApp = (MyApp)ShangjiaDingdangunaliActivity.this.getApplication();
 		String token = myApp.getInfo().getData().getToken();*/
 
-		params1.put("token",Data.getInfo().getData().getToken());
+		params1.put("token",Data.info.getData().getToken());
 		params1.put("type", "all");
 
 		
@@ -68,9 +70,9 @@ public class ShangjiaDingdangunaliActivity extends Activity{
 										.getJSONObject("data");
 								// String total= datajson.getString("total");
 
-								JSONObject listJson = datajson
-										.getJSONObject("list");
-								ArrayList<JSONObject> warrlist1 = new ArrayList<JSONObject>();
+								JSONArray listJson = datajson
+										.getJSONArray("list");
+								/*ArrayList<JSONObject> warrlist1 = new ArrayList<JSONObject>();
 								
 								Iterator<String> it = listJson.keys();
 								while (it.hasNext()) {
@@ -78,9 +80,9 @@ public class ShangjiaDingdangunaliActivity extends Activity{
 									JSONObject object = listJson.getJSONObject(key);
 									warrlist1.add(object);
 
-								}
+								}*/
 							
-								adapter.setData(warrlist1);
+								adapter.setData(listJson);
 								
 						
 
@@ -115,7 +117,7 @@ public class ShangjiaDingdangunaliActivity extends Activity{
 					Intent intent=new Intent(ShangjiaDingdangunaliActivity.this,DingdanXiangqing.class);
 					
 					
-					intent.putExtra("order_id", adapter.getData().get(arg2).getString("order_id"));
+					intent.putExtra("order_id", adapter.getData().getJSONObject(arg2).getString("order_id"));
 					startActivity(intent);
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block

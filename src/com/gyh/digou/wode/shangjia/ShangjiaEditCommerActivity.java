@@ -9,6 +9,8 @@ import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
@@ -142,7 +144,7 @@ public class ShangjiaEditCommerActivity extends Activity {
 
 				} else {
 
-					if (goods_file_ids.size() >= 1) {
+					if (linkedList.size() >= 1) {
 						editCommer2();
 						
 					}else
@@ -293,7 +295,7 @@ public class ShangjiaEditCommerActivity extends Activity {
 			
 			@Override
 			public void onClick(View arg0) {
-				Intent intent=new Intent(ShangjiaEditCommerActivity.this,EditShangpinAddFormatActivity.class);
+				Intent intent=new Intent(ShangjiaEditCommerActivity.this,ShangpinEditAddFormatActivity.class);
 				intent.putExtra("specs",goods.get_specs().toArray());
 				startActivityForResult(
 						
@@ -487,7 +489,10 @@ public class ShangjiaEditCommerActivity extends Activity {
 								JSONObject jsonData = jsonObject
 										.getJSONObject("data");
 								//id1 += jsonData.getString("id") + ",";
-								goods_file_ids.add(jsonData.getString("id"));
+								linkedList.add(jsonData.getString("id"));
+								/*IImages image=new IImages();
+								image.setFile_id(jsonData.getString("id"));
+								imageList.add(image);*/
 								addImageViews(jsonData.getString("id"));
 
 							} catch (JSONException e) {
@@ -553,7 +558,7 @@ public class ShangjiaEditCommerActivity extends Activity {
 	protected void delCommer() {
 		final List<NameValuePair> params=new ArrayList<NameValuePair>();
 		
-		params.add(new BasicNameValuePair("token",Data.getInfo().getData().getToken()));
+		params.add(new BasicNameValuePair("token",Data.info.getData().getToken()));
 		
 		params.add(new BasicNameValuePair("id",goods.getGoods_id()));
 		
@@ -577,7 +582,7 @@ public class ShangjiaEditCommerActivity extends Activity {
 	
 	
 	
-	List<String> goods_file_ids=new ArrayList<String>();
+	//List<String> goods_file_ids=new ArrayList<String>();
 	//EditText edit_name;
 	@Override
 	protected void onDestroy() {
@@ -673,8 +678,8 @@ public class ShangjiaEditCommerActivity extends Activity {
 						
 						System.out.println("ttsstss");
 						
-						goods_file_ids.remove(image.getFile_id());
-						System.out.println("ttsstss==="+goods_file_ids.size());
+						linkedList.remove(image.getFile_id());
+						System.out.println("ttsstss==="+linkedList.size());
 						
 						layout.removeView(layout_rela);
 						
@@ -710,7 +715,7 @@ public class ShangjiaEditCommerActivity extends Activity {
 			case 0x1132:
 				
 				Log.d("handler...", "");
-				goods_file_ids.remove(msg.obj);
+				linkedList.remove(msg.obj);
 				break;
 			}
 			
@@ -750,7 +755,7 @@ public class ShangjiaEditCommerActivity extends Activity {
 				Log.d("sasdfasd", "1111111111111111112");
 				
 				
-				goods_file_ids.remove((String)imv_del.getTag());
+				linkedList.remove((String)imv_del.getTag());
 				layout.removeView(layout_rela);
 				
 				
@@ -769,15 +774,17 @@ public class ShangjiaEditCommerActivity extends Activity {
 		
 	}
 	
+	//List<IImages> imageList;
+	LinkedList<String> linkedList=new LinkedList<String>();
 	protected void showText() {
 		
 		
-		
+			//imageList=goods.get_images();
 			for(IImages image:goods.get_images())
 			{
 				//id1+=image.getFile_id()+",";
-				
-				goods_file_ids.add(image.getFile_id());
+				linkedList.add(image.getFile_id());
+				//goods_file_ids.add(image.getFile_id());
 				
 			}
 		
@@ -814,12 +821,6 @@ public class ShangjiaEditCommerActivity extends Activity {
 		
 	}
 
-	/*public String getToken()
-	{
-		
-		return MyApp.info.getData().getToken();
-	}*/
-	
 	protected void editCommer2() {
 		showDialog();
 		//getSpecData(goods);
@@ -835,7 +836,7 @@ public class ShangjiaEditCommerActivity extends Activity {
 		String tianjia_miaoshuc=tianjia_miaoshu.getText().toString();
 		String tianjia_pingpaic=tianjia_pingpai.getText().toString();	
 		
-		param_list.add(new BasicNameValuePair("token",Data.getInfo().getData().getToken()));
+		param_list.add(new BasicNameValuePair("token",Data.info.getData().getToken()));
 		param_list.add(new BasicNameValuePair("id",goods_id));
 		param_list.add(new BasicNameValuePair("sku", tianjia_tiaoxingmac));
 		param_list.add(new BasicNameValuePair("brand", tianjia_pingpaic));
@@ -909,11 +910,18 @@ public class ShangjiaEditCommerActivity extends Activity {
 	private String getFileIdString() {
 		StringBuilder sb=new StringBuilder();
 		
-		for(String s:goods_file_ids)
+		
+		
+		//Iterator<String> itr=linkedList.iterator();
+		/*while(itr.hasNext())
+		{
+			sb.append(itr.next()+",");
+		}*/
+		for(int j=linkedList.size()-1;j>=0;j--)
 		{
 			
 			
-			sb.append(s+",");
+			sb.append(linkedList.get(j)+",");
 		}
 		
 		return sb.toString();

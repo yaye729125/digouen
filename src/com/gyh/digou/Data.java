@@ -28,18 +28,19 @@ public class Data {
 	public static String getUserType()
 	{
 		
+		//System.out.println(info);
 		
-		if(null==getInfo())
+		if(null==Data.info)
 		{
 			return "user";
 		}else
 		{
-			if(null==getInfo().getData().getStore_id())
+			if(null==Data.info.getData().getStore_id())
 			{
 				return "user";
 			}else
 			{
-				String store_id=getInfo().getData().getStore_id();
+				String store_id=Data.info.getData().getStore_id();
 				if(store_id.equals("")||store_id.equals("null"))
 				{
 					
@@ -50,9 +51,7 @@ public class Data {
 			}
 		}
 		
-		/*getInfo().getData().getHas_store()==null||;
 		
-		return null;*/
 		
 		
 	}
@@ -78,15 +77,15 @@ public class Data {
 	
 	
 	
-	public static LoginInfo getInfo() {
-		return info;
+	/*public static LoginInfo getInfo() {
+		return Data.info;
 	}
 
 
 
 	public static void setInfo(LoginInfo info) {
 		Data.info = info;
-	}
+	}*/
 
 	
 	/*public static void saveInfo(final Context mContext,final LoginInfo info)

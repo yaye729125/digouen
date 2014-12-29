@@ -40,7 +40,7 @@ public class Xuanzefenlei extends Activity{
 		
 		AjaxParams params = new AjaxParams();
 		
-		params.put("token", Data.getInfo().getData().getToken());
+		params.put("token",Data.info.getData().getToken());
 		
 
 		FinalHttp fh = new FinalHttp();

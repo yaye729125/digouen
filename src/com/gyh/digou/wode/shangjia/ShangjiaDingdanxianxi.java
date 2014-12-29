@@ -80,7 +80,7 @@ protected void onCreate(Bundle savedInstanceState) {
 			
 			AjaxParams params = new AjaxParams();
 			
-			params.put("token", Data.getInfo().getData().getToken());
+			params.put("token", Data.info.getData().getToken());
 			params.put("invoice_no", invoice_no);
 			params.put("order_id", order_id);
 
@@ -144,7 +144,7 @@ protected void onCreate(Bundle savedInstanceState) {
 	   AjaxParams paramsq = new AjaxParams();
 		
 
-		paramsq.put("token", Data.getInfo().getData().getToken());
+		paramsq.put("token", Data.info.getData().getToken());
 		paramsq.put("order_id", id);
 
 		

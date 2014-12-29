@@ -10,6 +10,7 @@ import java.util.List;
 
 import net.tsz.afinal.FinalBitmap;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -35,7 +36,8 @@ import android.widget.LinearLayout.LayoutParams;
 public class DingdanAdapter extends BaseAdapter{
 
 	LayoutInflater inflater;
-	List<JSONObject> json_list;
+	JSONArray jsonArray;
+	//List<JSONObject> json_list;
 	
 	Context mContext;
 	FinalBitmap imageLoader;
@@ -53,27 +55,27 @@ public class DingdanAdapter extends BaseAdapter{
 	}
 	
 	
-	public void setData(List<JSONObject> json_list)
+	public void setData(JSONArray array)
 	{
-		if(json_list!=null)
+		if(array!=null)
 		{
-			this.json_list=json_list;
+			
+			this.jsonArray=array;
 			notifyDataSetChanged();
-			
-			
 		}
+		
 	}
 	
-	public List<JSONObject> getData()
+	public JSONArray getData()
 	{
 		
 		
-		return json_list;
+		return jsonArray;
 	}
 	@Override
 	public int getCount() {
 		// TODO Auto-generated method stub
-		return json_list==null?0:json_list.size();
+		return jsonArray==null?0:jsonArray.length();
 	}
 
 	@Override
@@ -90,9 +92,9 @@ public class DingdanAdapter extends BaseAdapter{
 
 	@Override
 	public View getView(int arg0, View arg1, ViewGroup arg2) {
-		
-		JSONObject json_item=json_list.get(arg0);
 		try {
+		JSONObject json_item=(JSONObject) jsonArray.get(arg0);
+	
 			
 			ViewHolder viewHolder = null;
 
@@ -122,14 +124,14 @@ public class DingdanAdapter extends BaseAdapter{
 				viewHolder = (ViewHolder) arg1.getTag();
 			}
 
-			viewHolder.textView1.setText(json_list.get(arg0).getString("order_sn"));
+			viewHolder.textView1.setText(json_item.getString("order_sn"));
 
-			viewHolder.textView2.setText(json_list.get(arg0).getString(
+			viewHolder.textView2.setText(json_item.getString(
 					"order_amount"));
 
-			viewHolder.textView3.setText(Tools.getAddTime(json_list.get(arg0).getString("add_time")));
+			viewHolder.textView3.setText(Tools.getAddTime(json_item.getString("add_time")));
 
-			viewHolder.textView4.setText(json_list.get(arg0)
+			viewHolder.textView4.setText(json_item
 					.getString("status_name"));
 
 		
@@ -179,7 +181,7 @@ public class DingdanAdapter extends BaseAdapter{
 		}
 
 		//arg1 = inflater.inflate(R.layout.maijiadingdan_styl, null);
-		Log.d("YiyueqianDingDaniAdapter", "getView===="+json_list.get(arg0).toString());
+		//Log.d("YiyueqianDingDaniAdapter", "getView===="+json_list.get(arg0).toString());
 		return arg1;
 	}
 	

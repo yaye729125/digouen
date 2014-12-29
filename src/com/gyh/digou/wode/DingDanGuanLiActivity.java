@@ -8,6 +8,7 @@ import net.tsz.afinal.FinalHttp;
 import net.tsz.afinal.http.AjaxCallBack;
 import net.tsz.afinal.http.AjaxParams;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -51,7 +52,7 @@ public class DingDanGuanLiActivity extends Activity implements OnCheckedChangeLi
 					Intent intent=new Intent(DingDanGuanLiActivity.this,DingdanXiangqing.class);
 					
 					
-					intent.putExtra("order_id", adapter.getData().get(arg2).getString("order_id"));
+					intent.putExtra("order_id", adapter.getData().getJSONObject(arg2).getString("order_id"));
 					startActivity(intent);
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
@@ -108,7 +109,7 @@ public class DingDanGuanLiActivity extends Activity implements OnCheckedChangeLi
 
 	     	AjaxParams params = new AjaxParams();
 			
-			params.put("token", Data.getInfo().getData().getToken());		
+			params.put("token",Data.info.getData().getToken());		
 			params.put("type", mode);
 			
 			FinalHttp fh = new FinalHttp();
@@ -124,40 +125,20 @@ public class DingDanGuanLiActivity extends Activity implements OnCheckedChangeLi
 						@Override
 						public void onSuccess(String t) {
 							 System.out.println("---89-------"+t+"--");
-							// pullToRefreshListView.onRefreshComplete();
 							try {
 
 								JSONObject jsonObject = new JSONObject(t);
 								String ErrNum = jsonObject.getString("ErrNum");
 								String ErrMsg = jsonObject.getString("ErrMsg");
-								JSONObject datajson = jsonObject
-										.getJSONObject("data");
-								// String total= datajson.getString("total");
-
-								JSONObject listJson = datajson
-										.getJSONObject("orders");
-								 warrlist = new ArrayList<JSONObject>();
+								JSONObject json_data=jsonObject.getJSONObject("data");
+								JSONArray json_array=json_data.getJSONArray("list");
 								
-								Iterator<String> it = listJson.keys();
-								while (it.hasNext()) {
-									String key = it.next();
-									JSONObject object = listJson.getJSONObject(key);
-									warrlist.add(object);
-								}
-								//System.out.println("-33-11"+warrlist1);
+								adapter.setData(json_array);
 							
-							adapter.setData(warrlist);
-							//YiyueqianDingDaniAdapter adapter=new YiyueqianDingDaniAdapter(DingDanGuanLiActivity.this, warrlist);
-							
-						//	DingdanXiangqingAdapter adapter2 =new DingdanXiangqingAdapter(DingDanGuanLiActivity.this, warrlists);
-							//listView.setAdapter(adapter);
-							//	listView1.setAdapter(adapter2);
 
 							} catch (Exception e) {
 								e.printStackTrace();
-								//pullToRefreshListView.onRefreshComplete();
-								// TODO: handle exception
-
+								
 							}
 
 						}

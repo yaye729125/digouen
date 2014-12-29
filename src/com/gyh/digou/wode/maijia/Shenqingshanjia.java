@@ -650,7 +650,7 @@ public class Shenqingshanjia extends Activity{
 				Toast.LENGTH_SHORT).show();
 			AjaxParams params = new AjaxParams();
 			
-			params.put("token", Data.getInfo().getData().getToken());
+			params.put("token",Data.info.getData().getToken());
 			params.put("sgrade_id", dianpuleixingid);
 			params.put("store_name", dianpuming);
 			params.put("owner_name", dianzhuming);

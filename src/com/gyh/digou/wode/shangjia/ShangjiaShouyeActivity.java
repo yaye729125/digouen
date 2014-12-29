@@ -138,7 +138,7 @@ public class ShangjiaShouyeActivity extends Activity{
 		/*MyApp myApp = (MyApp) this.getApplication();
 		String token = myApp.getInfo().getData().getToken();*/
 		//MyApp app = (MyApp) ShangjiaShouyeActivity.this.getApplication();
-		params.put("token", Data.getInfo().getData().getToken());
+		params.put("token", Data.info.getData().getToken());
 		//params.put("pattern", "newpm");
 
 		FinalHttp fh = new FinalHttp();

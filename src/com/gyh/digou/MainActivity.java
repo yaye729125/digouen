@@ -600,7 +600,7 @@ public class MainActivity extends FragmentActivity implements OnCheckedChangeLis
 		
 		/*MyApp myApp=(MyApp)MainActivity.this.getApplication();
 		String token=myApp.getInfo().getData().getToken();*/
-		params.put("token",Data.getInfo().getData().getToken());
+		params.put("token",Data.info.getData().getToken());
 		try {
 		params.put("image",imageFile);
 		

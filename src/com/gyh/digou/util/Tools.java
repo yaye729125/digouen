@@ -10,6 +10,8 @@ import android.content.SharedPreferences;
 import android.os.Environment;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 

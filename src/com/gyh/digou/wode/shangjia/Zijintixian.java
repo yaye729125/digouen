@@ -60,7 +60,7 @@ public class Zijintixian extends Activity{
 			
 			AjaxParams params = new AjaxParams();
 			
-			params.put("token", Data.getInfo().getData().getToken());
+			params.put("token",Data.info.getData().getToken());
 			params.put("funds", zijin);
 			
 
@@ -126,7 +126,7 @@ public class Zijintixian extends Activity{
 		
 		AjaxParams params = new AjaxParams();
 		
-		params.put("token", Data.getInfo().getData().getToken());
+		params.put("token",Data.info.getData().getToken());
 		
 
 		FinalHttp fh = new FinalHttp();

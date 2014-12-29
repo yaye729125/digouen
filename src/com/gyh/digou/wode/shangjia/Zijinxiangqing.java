@@ -60,7 +60,7 @@ public class Zijinxiangqing extends Activity{
 		
 		AjaxParams params = new AjaxParams();
 		
-		params.put("token", Data.getInfo().getData().getToken());
+		params.put("token", Data.info.getData().getToken());
 		
 
 		FinalHttp fh = new FinalHttp();
@@ -82,9 +82,9 @@ public class Zijinxiangqing extends Activity{
 							JSONObject jsonObject=new JSONObject(t);
 							
 						JSONObject jsonObject2=	jsonObject.getJSONObject("data");
-					String zonge=	jsonObject2.getString("paysum");
+						String zonge=	jsonObject2.getString("paysum");
 						
-					textView.setText(zonge);
+						textView.setText(zonge);
 					
 						JSONObject jsonObject3=jsonObject2.getJSONObject("list");
 						

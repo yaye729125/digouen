@@ -50,7 +50,7 @@ public class DizhiguanliActivity extends Activity {
 		
 		AjaxParams params = new AjaxParams();
 		
-		params.put("token", Data.getInfo().getData().getToken());
+		params.put("token", Data.info.getData().getToken());
 
 		FinalHttp fh = new FinalHttp();
 		fh.post(Tools.getBaseUrl() + "?app=my_address&act=api_address", params,
@@ -144,7 +144,7 @@ public class DizhiguanliActivity extends Activity {
 						
 						AjaxParams params = new AjaxParams();
 						
-						params.put("token", Data.getInfo().getData().getToken());
+						params.put("token", Data.info.getData().getToken());
 						params.put("addr_id", num);
 
 						FinalHttp fh = new FinalHttp();

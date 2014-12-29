@@ -270,7 +270,7 @@ public class WoDeFragement extends Fragment{
 				            	
 				            	 File userInfo=  mContext.getFileStreamPath("login"); 	
 				            	 userInfo.delete();
-				            	 Data.setInfo(null);
+				            	 Data.info=null;
 				        /*    	//MyApp app=get MyApp();	
  			          MyApp  app=(MyApp)activity.getApplication();
 				       File name= app.getFileStreamPath("login");
@@ -410,7 +410,7 @@ public class WoDeFragement extends Fragment{
 				String token=myApp.getInfo().getData().getToken();*/
 				
 				
-				params2.add(new BasicNameValuePair("token",Data.getInfo().getData().getToken()));
+				params2.add(new BasicNameValuePair("token",Data.info.getData().getToken()));
 				String result=NetworkUtil.post(Tools.getBaseUrl()+"?app=member&act=api_user_info",params2);
 				System.out.println(result);
 				try {
@@ -469,7 +469,7 @@ public class WoDeFragement extends Fragment{
 				 final Map<String, String> params = new HashMap<String, String>();
 				/* MyApp myApp=(MyApp) activity.getApplication();
 				 String token=myApp.getInfo().getData().getToken();*/
-		         params.put("token",Data.getInfo().getData().getToken());
+		         params.put("token",Data.info.getData().getToken());
 		      
 		         final Map<String, File> files = new HashMap<String, File>();
 				 try {

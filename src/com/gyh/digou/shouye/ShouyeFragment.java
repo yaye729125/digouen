@@ -475,21 +475,10 @@ public class ShouyeFragment extends Fragment{
 					viewHolder.shangPinOldPrice.setText(json.getString("price"));
 				}
 				
-				if(null==viewHolder.pictureName.getTag())
-				{
-					viewHolder.pictureName.setTag(json.getString("default_image"));
-					imageLoader.display(viewHolder.pictureName,json.getString("default_image"));
-					
-				}else
-				{
-					imageLoader.display(viewHolder.pictureName,(String)viewHolder.pictureName.getTag());
-				}
 				
+				imageLoader.display(viewHolder.pictureName,json.getString("default_image"));
 				
-				
-					
-				
-					viewHolder.shangPinMingXi.setText(json.getString("goods_name"));
+				viewHolder.shangPinMingXi.setText(json.getString("goods_name"));
 				} catch (JSONException e) {
 					
 					e.printStackTrace();
@@ -558,28 +547,11 @@ public class ShouyeFragment extends Fragment{
 					{
 						String key=(String) itr.next();
 						JSONObject numObject=(JSONObject) listObject.get(key);
-						/*String goods_name = numObject.getString("goods_name");
-						String default_image = numObject.getString("default_image");
-						String goods_id=numObject.getString("goods_id");
-						System.out.println(numObject.get("goods_id"));
-						HashMap<String, String> map = new HashMap<String, String>();
-						map.put("goods_name", goods_name);
-						map.put("goods_id", goods_id);
-						map.put("default_image", default_image);*/
-						//list.add(numObject);
-						//list.
 						list.put(numObject);
 		
 					}
 					shouyeListAdapter.notifyDataSetChanged();
-					//listBaseAdapter.setData(list);
-					//JSONArray arry=new JSONArray(list);
-					//arry.get
-					//arry.
 					
-					//cache.put(key, value)
-					
-				
 					mHandler.sendEmptyMessage(initRecommandFin);
 					cache.put("shouye",list);//加入缓存
 				} catch (Exception e) {

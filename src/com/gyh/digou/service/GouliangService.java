@@ -134,7 +134,7 @@ public class GouliangService extends Service{
 						list_params.add(new BasicNameValuePair("pageSize", "150"));
 						list_params.add(new BasicNameValuePair("lng", getLocation().getLongitude()+""));
 						list_params.add(new BasicNameValuePair("lat", getLocation().getLatitude()+""));
-						list_params.add(new BasicNameValuePair("user_id", Data.getInfo().getData().getUser_id()));
+						list_params.add(new BasicNameValuePair("user_id",Data.info.getData().getUser_id()));
 						list_params.add(new BasicNameValuePair("distance", "50000"));
 						list_params.add(new BasicNameValuePair("point", "1"));
 						
@@ -254,7 +254,7 @@ public class GouliangService extends Service{
 				params.put("pageSize","150");
 				params.put("lng",getLocation().getLongitude()+"");
 				params.put("lat",getLocation().getLatitude()+"");
-				params.put("user_id",Data.getInfo().getData().getUser_id());
+				params.put("user_id",Data.info.getData().getUser_id());
 				params.put("distance", "50000");
 				params.put("point", "10");
 				
@@ -332,7 +332,7 @@ public class GouliangService extends Service{
 		params.put("pageSize","150");
 		params.put("lng",location.getLongitude()+"");
 		params.put("lat",location.getLatitude()+"");
-		params.put("user_id",Data.getInfo().getData().getUser_id());
+		params.put("user_id",Data.info.getData().getUser_id());
 		params.put("distance", "50000");
 		params.put("point", "10");
 		

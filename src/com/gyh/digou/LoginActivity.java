@@ -105,14 +105,20 @@ public class LoginActivity extends Activity {
 							Gson gson=new Gson();
 						
 							LoginInfo info=gson.fromJson(t, LoginInfo.class);
-							Data.info=info;
-							MyApp app=((MyApp)LoginActivity.this.getApplication());
 							
-							app.saveInfo(info);
-							
-							//Data.setInfo(info);
-							Toast.makeText(LoginActivity.this,info.getErrMsg(),Toast.LENGTH_SHORT).show();
-							LoginActivity.this.finish();
+							if(info.ErrNum.equals("0"))
+							{
+								Data.info=info;
+								MyApp app=((MyApp)LoginActivity.this.getApplication());
+								
+								app.saveInfo(info);
+								
+								//Data.setInfo(info);
+								Toast.makeText(LoginActivity.this,info.getErrMsg(),Toast.LENGTH_SHORT).show();
+								LoginActivity.this.finish();
+							}else{
+								Toast.makeText(LoginActivity.this,info.getErrMsg(),Toast.LENGTH_SHORT).show();
+							}
 						}catch(JsonSyntaxException e)
 						{
 							

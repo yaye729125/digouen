@@ -291,7 +291,7 @@ public class DizhiBianjiActivity extends Activity {
 				MyApp app = (MyApp) DizhiBianjiActivity.this.getApplication();*/
 				System.out.println(xingming + "333333333333333333333");
 
-				params.put("token", Data.getInfo().getData().getToken());
+				params.put("token",Data.info.getData().getToken());
 				params.put("consignee", xingming);
 				params.put("region_id", "4");
 				params.put("region_name", opo);

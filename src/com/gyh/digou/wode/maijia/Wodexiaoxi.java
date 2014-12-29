@@ -50,7 +50,7 @@ public class Wodexiaoxi extends Activity implements OnCheckedChangeListener{
 		
 		
 		MyApp app = (MyApp) Wodexiaoxi.this.getApplication();
-		params.put("token",Data.getInfo().getData().getToken());
+		params.put("token",Data.info.getData().getToken());
 		params.put("pattern",mode);
 
 		FinalHttp fh = new FinalHttp();
