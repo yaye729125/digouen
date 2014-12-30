@@ -32,6 +32,7 @@ import com.gyh.digou.progerss.CustomProgressDialog;
 import com.gyh.digou.util.NetworkUtil;
 import com.gyh.digou.util.Tools;
 import com.gyh.digou.view.NoScrollGridView;
+import com.gyh.digou.wode.shangjia.commermana.adapter.ImageAdapter;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -83,7 +84,7 @@ import android.widget.Toast;
  */
 public class TianJiaShangPinActivity extends Activity {
 
-	ImageView button1;
+	//ImageView button1;
 	
 	
 	
@@ -97,9 +98,9 @@ public class TianJiaShangPinActivity extends Activity {
 	
 	
 	int a = 0;
-	String b;//if_show 0 or 1
+	String b="1";//if_show 0 or 1
 	
-	String c;//recommend
+	String c="1";//recommend
 	
 	String dayta;//cate_name
 	String cate_id = null;
@@ -178,7 +179,7 @@ public class TianJiaShangPinActivity extends Activity {
 		adapter=new TianjiaListAdapter();
 		
 		list.setAdapter(adapter);
-		imageAdapter=new ImageAdapter();
+		imageAdapter=new ImageAdapter(this);
 		grid_image.setAdapter(imageAdapter);
 		//grid_image.setAdapter()
 		grid_image.setOnItemClickListener(new OnItemClickListener() {
@@ -296,25 +297,28 @@ public class TianJiaShangPinActivity extends Activity {
 					@Override
 					public void onItemClick(AdapterView<?> arg0, View arg1,
 							int arg2, long arg3) {
-						if (arg2 == 0) {
-							Intent intent = new Intent();
-							intent.setType("image/*");
+						Intent intent = new Intent();
+						switch(arg2)
+						{
+						
+						case 0:
+							
+				            intent.setType("image/*");
 
-							intent.setAction(Intent.ACTION_GET_CONTENT);
-							startActivityForResult(intent, 1);
+				            intent.setAction(Intent.ACTION_GET_CONTENT);
+				            startActivityForResult(intent, 1);
+				            alertDialog.dismiss();
+							break;
+						case 1:
+							 intent.setAction(
+	                                 "android.media.action.IMAGE_CAPTURE");
+							 startActivityForResult(intent, 0);
+	                      alertDialog.dismiss();
+							break;
+						case 2:
 							alertDialog.dismiss();
-
-						}
-						if (arg2 == 1) {
-							Intent intent = new Intent(
-									"android.media.action.IMAGE_CAPTURE");
-							startActivityForResult(intent, 0);
-							alertDialog.dismiss();
-
-						}
-						if (arg2 == 2) {
-							alertDialog.dismiss();
-
+							break;
+							
 						}
 
 					}
@@ -479,7 +483,7 @@ public class TianJiaShangPinActivity extends Activity {
 }
 	List<Specs> specList=new ArrayList<Specs>();
 	LayoutInflater inflater;
-	class TianjiaListAdapter extends BaseAdapter
+	public class TianjiaListAdapter extends BaseAdapter
 	{
 
 		@Override
@@ -750,13 +754,7 @@ public class TianJiaShangPinActivity extends Activity {
 		EditText pifajia;
 		EditText kucun;
 	    TextView tv;
-		
-		
 	}
-	
-	
-	
-	
 	public void EditCommit() {
 		showDialog();
 		specs=getSpecsEn();
@@ -804,7 +802,7 @@ public class TianJiaShangPinActivity extends Activity {
 		param_list.add(new BasicNameValuePair("stock[]", specs.getStock()));
 
 		param_list.add(new BasicNameValuePair("minimum_price[]", specs.getMinimum_price()));
-		param_list.add(new BasicNameValuePair("price[]", specs.getStock()));
+		param_list.add(new BasicNameValuePair("price[]", specs.getPrice()));
 		param_list
 				.add(new BasicNameValuePair("mk_price[]",  specs.getMk_price()));
 		param_list.add(new BasicNameValuePair("spec_1[]",specs.getSpec_1()));
@@ -893,7 +891,7 @@ public class TianJiaShangPinActivity extends Activity {
 		list=null;
 		adapter=null;
 		super.onDestroy();
-		
+		System.gc();
 		//list.
 	}
 
@@ -995,7 +993,8 @@ public class TianJiaShangPinActivity extends Activity {
 		
 		specList.add(new Specs());
 		goods_file_src.addFirst("add");
-		
+		imageAdapter.setData(goods_file_src);
+		//adapter.
 		
 	}
 	
@@ -1015,69 +1014,7 @@ public class TianJiaShangPinActivity extends Activity {
 	
 	
 	
-	class ImageAdapter extends BaseAdapter
-	{
-
-		@Override
-		public int getCount() {
-			// TODO Auto-generated method stub
-			return goods_file_src.size();
-		}
-
-		@Override
-		public Object getItem(int arg0) {
-			// TODO Auto-generated method stub
-			return null;
-		}
-
-		@Override
-		public long getItemId(int arg0) {
-			// TODO Auto-generated method stub
-			return 0;
-		}
-
-		@Override
-		public View getView(int arg0, View arg1, ViewGroup arg2) {
-			ImageViewHolder holder=null;
-			if(arg1==null)	{
-				
-				
-				holder=new ImageViewHolder();
-				arg1=inflater.inflate(R.layout.image_grid_item,null);
-				holder.imv=(ImageView) arg1.findViewById(R.id.image_grid_item_imv);
-				
-				arg1.setTag(holder);
-					
-					
-					
-				}else
-				{
-					holder=(ImageViewHolder) arg1.getTag();
-					
-				}
-			
-			
-				if(arg0<goods_file_src.size()-1)
-				{
-					imageLoader.display(holder.imv,goods_file_src.get(arg0));
-				}else
-				{
-					holder.imv.setImageResource(R.drawable.addgoods);
-				}
-				
-			
-			return arg1;
-		}
-		
-		
-		
-		
-	}
 	
-	static class ImageViewHolder 
-	{
-		ImageView imv;
-	}
 	/*private void getSpecsBySpec() {
 	
 		String[] stocks=specs.getStock().split(",");
@@ -1190,7 +1127,8 @@ public class TianJiaShangPinActivity extends Activity {
 
 		
 		goods_file_src.addFirst(src);
-		imageAdapter.notifyDataSetChanged();
+		imageAdapter.setData(goods_file_src);
+		//imageAdapter.notifyDataSetChanged();
 		//Tools.setListViewHeightBasedOnChildren(listView)
 		//goods_file_ids
 		

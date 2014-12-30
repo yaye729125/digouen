@@ -61,15 +61,8 @@ public class ShangjiaShouyeActivity extends Activity{
 	//shangjizijinguanli=(Button) findViewById(R.id.shangjizijinguanli);
 	
 	
-	initUserInfo();
 	
-	
-	addData();
-					
-					
-					
-					
-					
+			
 	GridView gridView=(GridView) findViewById(R.id.shangjiamoshi_gridview);
 					
 	gridView.setAdapter(new GridViewAdapter(this));			
@@ -105,12 +98,46 @@ public class ShangjiaShouyeActivity extends Activity{
 	
 	
 	
+	addData();
+	
 	}
 	
 	
 	
 	
 	
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+		System.gc();
+	}
+
+
+
+
+
+	@Override
+	protected void onRestart() {
+		// TODO Auto-generated method stub
+		super.onRestart();
+	}
+
+
+
+
+
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		initUserInfo();
+	}
+
+
+
+
+
 	private void addData() {
 		GridItemObject obj=new GridItemObject("订单管理",R.drawable.dingdanguanli_image,ShangjiaDingdangunaliActivity.class);
 		list.add(obj);
@@ -135,9 +162,7 @@ public class ShangjiaShouyeActivity extends Activity{
 	{
 		
 		AjaxParams params = new AjaxParams();
-		/*MyApp myApp = (MyApp) this.getApplication();
-		String token = myApp.getInfo().getData().getToken();*/
-		//MyApp app = (MyApp) ShangjiaShouyeActivity.this.getApplication();
+		
 		params.put("token", Data.info.getData().getToken());
 		//params.put("pattern", "newpm");
 
