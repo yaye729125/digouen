@@ -994,7 +994,7 @@ public class TianJiaShangPinActivity extends Activity {
 	{
 		
 		specList.add(new Specs());
-		goods_file_src.add("add");
+		goods_file_src.addFirst("add");
 		
 		
 	}
@@ -1189,7 +1189,7 @@ public class TianJiaShangPinActivity extends Activity {
 	protected void addImageViews(final String src) {
 
 		
-		goods_file_src.add(src);
+		goods_file_src.addFirst(src);
 		imageAdapter.notifyDataSetChanged();
 		//Tools.setListViewHeightBasedOnChildren(listView)
 		//goods_file_ids
